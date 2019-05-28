@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
-import ApplicationViews from "./ApplicationViews"
+// import ApplicationViews from "./components/ApplicationViews"
 
 class Nutshell extends Component {
   render() {
     return (
-      <React.Fragment>
-        <ApplicationViews />
-      </React.Fragment>
+      <div className="App">
+      <h1>INSIDE REACTOR STUDIO</h1>
+      <h2>REACTIVE NUTSHELL</h2>
+    </div>
+      // <React.Fragment>
+      //   <ApplicationViews />
+      // </React.Fragment>
     );
   }
 }
