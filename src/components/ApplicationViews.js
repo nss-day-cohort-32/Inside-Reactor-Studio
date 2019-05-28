@@ -8,6 +8,7 @@ export class ApplicationViews extends Component {
   // isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
   render() {
+    console.log('ApplicationViews render')
     return <div />;
   }
 }
