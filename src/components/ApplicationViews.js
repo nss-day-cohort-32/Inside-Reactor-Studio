@@ -9,7 +9,7 @@ export class ApplicationViews extends Component {
 
   render() {
     console.log('ApplicationViews render')
-    return <div />;
+    return <div/>;
   }
 }
 
