@@ -1,16 +1,43 @@
-// import { Route, Redirect } from 'react-router-dom'
-// import { withRouter } from 'react-router'
+import { Route } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import React, { Component } from 'react';
+import EventList from "./event/EventList"
+import EventManager from "../modules/EventManager"
 
-export class ApplicationViews extends Component {
-  state = {};
+ class ApplicationViews extends Component {
+  state = {
+    login: [],
+    events: [],
+    news: [],
+    tasks: [],
+    messages: [],
+    friends: []
+  }
+
+  componentDidMount() {
+    const newState = {}
+
+    EventManager.getAll().then(allEvents => {
+      this.setState({
+        events: allEvents
+      })
+    })
+
+
+  }
 
   // isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
   render() {
     console.log('ApplicationViews render')
-    return <div/>;
-  }
+    return (
+      <React.Fragment>
+        <Route exact path="/events" render={(props) => {
+          return <EventList events = {this.state.events}/>
+        }} />
+      </React.Fragment>
+    )}
 }
 
-export default ApplicationViews;
+
+export default withRouter(ApplicationViews)
