@@ -1,18 +1,19 @@
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
+
 import EventList from './event/EventList';
 import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
-import TaskManager from '../modules/TaskManager';
+
 import TaskList from './task/TaskList';
+import TaskManager from '../modules/TaskManager';
 import TaskForm from './task/TaskForm';
 
 class ApplicationViews extends Component {
   state = {
     login: [],
     news: [],
-    tasks: [],
     messages: [],
     friends: []
   };

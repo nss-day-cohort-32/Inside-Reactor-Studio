@@ -199,28 +199,9 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "task_title": "Shovel snow",
-      "task_doneBy": "2030-07-14",
-      "task_completed": false
-    },
-    {
       "task_title": "TRY2SAVE",
       "task_doneBy": "2019-05-08",
       "id": 6
-    },
-    {
-      "task_title": "TEST2",
-      "task_doneBy": "2019-05-15",
-      "id": 7
-    },
-    {
-      "task_title": "Give fatherly advice",
-      "task_doneBy": "2019-05-16",
-      "task_completed": false,
-      "userId": "1",
-      "id": 8
     },
     {
       "task_title": "PLEASE BE TRUE",
@@ -279,6 +260,12 @@
       "event_name": "This is an event name",
       "event_details": "This is an even detail",
       "event_date": "2010-07-14"
+    },
+    {
+      "event_name": "test event",
+      "event_details": "test",
+      "event_date": "2019-05-09",
+      "id": 7
     }
   ],
   "friends": [
