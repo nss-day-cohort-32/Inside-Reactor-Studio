@@ -3,8 +3,9 @@ import { withRouter } from 'react-router'
 import React, { Component } from 'react';
 import EventList from "./event/EventList"
 import EventManager from "../modules/EventManager"
+import Welcome from "./Welcome"
 
- class ApplicationViews extends Component {
+class ApplicationViews extends Component {
   state = {
     login: [],
     events: [],
@@ -32,11 +33,15 @@ import EventManager from "../modules/EventManager"
     console.log('ApplicationViews render')
     return (
       <React.Fragment>
+        <Route path="/" render={(props) => {
+          return <Welcome />
+        }} />
         <Route exact path="/events" render={(props) => {
-          return <EventList events = {this.state.events}/>
+          return <EventList events={this.state.events} />
         }} />
       </React.Fragment>
-    )}
+    )
+  }
 }
 
 
