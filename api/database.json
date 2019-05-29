@@ -1,340 +1,375 @@
-
 {
-    "users": [
-      {
-        "id": 1,
-        "user_name": "Ned Stark",
-        "password": "password"
-      },
-      {
-        "id": 2,
-        "user_name": "Robert Baratheon",
-        "password": "password"
-      },
-      {
-        "id": 3,
-        "user_name": "Jon Snow",
-        "password": "password"
-      },
-      {
-        "id": 4,
-        "user_name": "Daenerys Targaryen",
-        "password": "password"
-      },
-      {
-        "user_name": "Gendry",
-        "password": "truKing",
-        "id": 5
-      },
-      {
-        "user_name": "Joffry",
-        "password": "bratking",
-        "id": 6
-      },
-      {
-        "user_name": "Rob Stark",
-        "password": "kingofnorth",
-        "id": 7
-      },
-      {
-        "user_name": "GeorgeRMartin666",
-        "password": "nobookforyou",
-        "id": 8
-      },
-      {
-        "user_name": "Sansa",
-        "password": "wannabequeen",
-        "id": 9
-      },
-      {
-        "user_name": "haji",
-        "password": "dek",
-        "id": 10
-      }
-    ],
-    "messages": [
-      {
-        "message_content": "I <3 direwolves and bein' honest",
-        "userId": "1",
-        "userName": "Ned Stark",
-        "date": "2014-05-13T20:06:50.620Z",
-        "id": 1
-      },
-      {
-        "message_content": "I also <3 Direwolves and Honesty",
-        "userId": "3",
-        "userName": "Jon Snow",
-        "date": "2014-05-13T20:06:50.620Z",
-        "id": 2
-      },
-      {
-        "message_content": "I like metal. Heavy metal",
-        "userId": "5",
-        "userName": "Gendry",
-        "date": "2015-06-13T20:06:50.620Z",
-        "id": 3
-      },
-      {
-        "message_content": "I has dragons",
-        "userId": "4",
-        "userName": "Daenerys Targaryen",
-        "date": "2016-05-13T20:06:50.620Z",
-        "id": 4
-      },
-      {
-        "message_content": "Immm the King of the north!",
-        "userId": "7",
-        "userName": "Rob Stark",
-        "date": "2017-05-13T20:06:50.620Z",
-        "id": 7
-      },
-      {
-        "message_content": "Winter is coming",
-        "userId": "1",
-        "userName": "Ned Stark",
-        "date": "2019-05-14T04:28:27.432Z",
-        "id": 9
-      },
-      {
-        "message_content": "How is everyone doing down in King's Landing?",
-        "userId": "9",
-        "userName": "Sansa",
-        "date": "2019-05-14T04:44:45.745Z",
-        "id": 10
-      }
-    ],
-    "articles": [
-      {
-        "id": 1,
-        "userId": 1,
-        "article_title": "This is an article title",
-        "article_blurb": "This is an article blurd",
-        "article_link": "https://news.link.com",
-        "article_published": "2017-07-14"
-      },
-      {
-        "id": 2,
-        "userId": 1,
-        "article_title": "This is an article title",
-        "article_blurb": "This is an article blurd",
-        "article_link": "https://news.link.com",
-        "article_published": "2011-07-15"
-      },
-      {
-        "id": 3,
-        "userId": 1,
-        "article_title": "This is an article title",
-        "article_blurb": "This is an article blurd",
-        "article_link": "https://news.link.com",
-        "article_published": "2011-02-14"
-      },
-      {
-        "id": 4,
-        "userId": 1,
-        "article_title": "This is an article title",
-        "article_blurb": "This is an article blurd",
-        "article_link": "https://news.link.com",
-        "article_published": "2011-07-17"
-      },
-      {
-        "article_title": "Test 1",
-        "article_blurb": "Test 2",
-        "article_link": "Test 3",
-        "article_published": "2019-05-08",
-        "id": 5
-      },
-      {
-        "article_title": "CRAZY NEWS HEADLINE",
-        "article_blurb": "blubvuweb",
-        "article_link": "link.com",
-        "article_published": "2019-05-02",
-        "id": 6
-      },
-      {
-        "article_title": "TEST TITLE",
-        "article_blurb": "BLURRRD",
-        "article_link": "LURNK",
-        "article_published": "2019-05-18",
-        "id": 7
-      },
-      {
-        "article_title": "Article Name",
-        "article_blurb": "sdfsdgweg",
-        "article_link": "LNK",
-        "article_published": "2019-08-12",
-        "userId": "1",
-        "id": 9
-      },
-      {
-        "article_title": "Top 10 Things to Do in the North",
-        "article_blurb": "1. be Cold",
-        "article_link": "northernthings.com",
-        "article_published": "1550-05-11",
-        "userId": "1",
-        "id": 10
-      },
-      {
-        "article_title": "Top 5 Winterfell Facts",
-        "article_blurb": "Its crazy",
-        "article_link": "coldthings.com",
-        "article_published": "2019-05-1",
-        "userId": "1",
-        "id": 11
-      },
-      {
-        "article_title": "LOL",
-        "article_blurb": "LOL",
-        "article_link": "LOL",
-        "article_published": "2019-05-08",
-        "userId": "2",
-        "id": 12
-      },
-      {
-        "article_title": "hrteh",
-        "article_blurb": "eht",
-        "article_link": "ehey",
-        "article_published": "2019-05-20",
-        "userId": "2",
-        "id": 13
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "userId": 1,
-        "task_title": "Shovel snow",
-        "task_doneBy": "2030-07-14",
-        "task_completed": false
-      },
-      {
-        "task_title": "TRY2SAVE",
-        "task_doneBy": "2019-05-08",
-        "id": 6
-      },
-      {
-        "task_title": "TEST2",
-        "task_doneBy": "2019-05-15",
-        "id": 7
-      },
-      {
-        "task_title": "Give fatherly advice",
-        "task_doneBy": "2019-05-16",
-        "task_completed": false,
-        "userId": "1",
-        "id": 8
-      },
-      {
-        "task_title": "PLEASE BE TRUE",
-        "task_doneBy": "2019-05-10",
-        "task_completed": false,
-        "userId": "1",
-        "id": 10
-      },
-      {
-        "task_title": "Do a thing",
-        "task_doneBy": "2019-05-15",
-        "task_completed": false,
-        "userId": "1",
-        "id": 12
-      },
-      {
-        "task_title": "Do another thing",
-        "task_doneBy": "2019-05-09",
-        "task_completed": false,
-        "userId": "1",
-        "id": 13
-      },
-      {
-        "task_title": "who let the dog out",
-        "task_doneBy": "2019-05-14",
-        "task_completed": false,
-        "userId": "1",
-        "id": 14
-      },
-      {
-        "task_title": "More snow shoveling",
-        "task_doneBy": "2019-05-17",
-        "task_completed": false,
-        "userId": "1",
-        "id": 15
-      },
-      {
-        "task_title": "Wash fur coat",
-        "task_doneBy": "2019-05-15",
-        "task_completed": false,
-        "userId": "9",
-        "id": 16
-      },
-      {
-        "task_title": "dfgasjkdgflask",
-        "task_doneBy": "2019-05-13",
-        "task_completed": false,
-        "userId": "2",
-        "id": 17
-      }
-    ],
-    "events": [
-      {
-        "id": 3,
-        "userId": 1,
-        "event_name": "This is an event name",
-        "event_details": "This is an even detail",
-        "event_date": "2011-07-14"
-      },
-      {
-        "id": 6,
-        "userId": 1,
-        "event_name": "This is an event name",
-        "event_details": "This is an even detail",
-        "event_date": "2010-07-14"
-      },
-      {
-        "event_name": "Walking to Kings Landing",
-        "event_details": "Winter is coming yo",
-        "event_date": "2019-05-25",
-        "id": 7
-      },
-      {
-        "event_name": "Walking south",
-        "event_details": "Winter is coming",
-        "event_date": "2019-05-01",
-        "id": 8
-      },
-      {
-        "event_name": "TESTES",
-        "event_details": "TESTE",
-        "event_date": "2019-05-08",
-        "id": 9
-      },
-      {
-        "event_name": "Walk to Kings Landing",
-        "event_details": "Winter is coming",
-        "event_date": "2019-05-08",
-        "id": 10
-      },
-      {
-        "event_name": "Run to Kings Landing",
-        "event_details": "Winter is Coming",
-        "event_date": "2019-05-11",
-        "userId": "1",
-        "id": 11
-      }
-    ],
-    "friends": [
-      {
-        "id": 1,
-        "userId": 1,
-        "otherFriendsId": 3
-      },
-      {
-        "id": 2,
-        "userId": 1,
-        "otherFriendsId": 2
-      },
-      {
-        "id": 3,
-        "userId": 1,
-        "otherFriendsId": 4
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "user_name": "Ned Stark",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "user_name": "Robert Baratheon",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "user_name": "Jon Snow",
+      "password": "password"
+    },
+    {
+      "id": 4,
+      "user_name": "Daenerys Targaryen",
+      "password": "password"
+    },
+    {
+      "user_name": "Gendry",
+      "password": "truKing",
+      "id": 5
+    },
+    {
+      "user_name": "Joffry",
+      "password": "bratking",
+      "id": 6
+    },
+    {
+      "user_name": "Rob Stark",
+      "password": "kingofnorth",
+      "id": 7
+    },
+    {
+      "user_name": "GeorgeRMartin666",
+      "password": "nobookforyou",
+      "id": 8
+    },
+    {
+      "user_name": "Sansa",
+      "password": "wannabequeen",
+      "id": 9
+    },
+    {
+      "user_name": "haji",
+      "password": "dek",
+      "id": 10
+    }
+  ],
+  "messages": [
+    {
+      "message_content": "I <3 direwolves and bein' honest",
+      "userId": "1",
+      "userName": "Ned Stark",
+      "date": "2014-05-13T20:06:50.620Z",
+      "id": 1
+    },
+    {
+      "message_content": "I also <3 Direwolves and Honesty",
+      "userId": "3",
+      "userName": "Jon Snow",
+      "date": "2014-05-13T20:06:50.620Z",
+      "id": 2
+    },
+    {
+      "message_content": "I like metal. Heavy metal",
+      "userId": "5",
+      "userName": "Gendry",
+      "date": "2015-06-13T20:06:50.620Z",
+      "id": 3
+    },
+    {
+      "message_content": "I has dragons",
+      "userId": "4",
+      "userName": "Daenerys Targaryen",
+      "date": "2016-05-13T20:06:50.620Z",
+      "id": 4
+    },
+    {
+      "message_content": "Immm the King of the north!",
+      "userId": "7",
+      "userName": "Rob Stark",
+      "date": "2017-05-13T20:06:50.620Z",
+      "id": 7
+    },
+    {
+      "message_content": "Winter is coming",
+      "userId": "1",
+      "userName": "Ned Stark",
+      "date": "2019-05-14T04:28:27.432Z",
+      "id": 9
+    },
+    {
+      "message_content": "How is everyone doing down in King's Landing?",
+      "userId": "9",
+      "userName": "Sansa",
+      "date": "2019-05-14T04:44:45.745Z",
+      "id": 10
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "article_title": "This is an article title",
+      "article_blurb": "This is an article blurd",
+      "article_link": "https://news.link.com",
+      "article_published": "2017-07-14"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "article_title": "This is an article title",
+      "article_blurb": "This is an article blurd",
+      "article_link": "https://news.link.com",
+      "article_published": "2011-07-15"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "article_title": "This is an article title",
+      "article_blurb": "This is an article blurd",
+      "article_link": "https://news.link.com",
+      "article_published": "2011-02-14"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "article_title": "This is an article title",
+      "article_blurb": "This is an article blurd",
+      "article_link": "https://news.link.com",
+      "article_published": "2011-07-17"
+    },
+    {
+      "article_title": "Test 1",
+      "article_blurb": "Test 2",
+      "article_link": "Test 3",
+      "article_published": "2019-05-08",
+      "id": 5
+    },
+    {
+      "article_title": "CRAZY NEWS HEADLINE",
+      "article_blurb": "blubvuweb",
+      "article_link": "link.com",
+      "article_published": "2019-05-02",
+      "id": 6
+    },
+    {
+      "article_title": "TEST TITLE",
+      "article_blurb": "BLURRRD",
+      "article_link": "LURNK",
+      "article_published": "2019-05-18",
+      "id": 7
+    },
+    {
+      "article_title": "Article Name",
+      "article_blurb": "sdfsdgweg",
+      "article_link": "LNK",
+      "article_published": "2019-08-12",
+      "userId": "1",
+      "id": 9
+    },
+    {
+      "article_title": "Top 10 Things to Do in the North",
+      "article_blurb": "1. be Cold",
+      "article_link": "northernthings.com",
+      "article_published": "1550-05-11",
+      "userId": "1",
+      "id": 10
+    },
+    {
+      "article_title": "Top 5 Winterfell Facts",
+      "article_blurb": "Its crazy",
+      "article_link": "coldthings.com",
+      "article_published": "2019-05-1",
+      "userId": "1",
+      "id": 11
+    },
+    {
+      "article_title": "LOL",
+      "article_blurb": "LOL",
+      "article_link": "LOL",
+      "article_published": "2019-05-08",
+      "userId": "2",
+      "id": 12
+    },
+    {
+      "article_title": "hrteh",
+      "article_blurb": "eht",
+      "article_link": "ehey",
+      "article_published": "2019-05-20",
+      "userId": "2",
+      "id": 13
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task_title": "Shovel snow",
+      "task_doneBy": "2030-07-14",
+      "task_completed": false
+    },
+    {
+      "task_title": "TRY2SAVE",
+      "task_doneBy": "2019-05-08",
+      "id": 6
+    },
+    {
+      "task_title": "TEST2",
+      "task_doneBy": "2019-05-15",
+      "id": 7
+    },
+    {
+      "task_title": "Give fatherly advice",
+      "task_doneBy": "2019-05-16",
+      "task_completed": false,
+      "userId": "1",
+      "id": 8
+    },
+    {
+      "task_title": "PLEASE BE TRUE",
+      "task_doneBy": "2019-05-10",
+      "task_completed": false,
+      "userId": "1",
+      "id": 10
+    },
+    {
+      "task_title": "Do a thing",
+      "task_doneBy": "2019-05-15",
+      "task_completed": false,
+      "userId": "1",
+      "id": 12
+    },
+    {
+      "task_title": "Do another thing",
+      "task_doneBy": "2019-05-09",
+      "task_completed": false,
+      "userId": "1",
+      "id": 13
+    },
+    {
+      "task_title": "who let the dog out",
+      "task_doneBy": "2019-05-14",
+      "task_completed": false,
+      "userId": "1",
+      "id": 14
+    },
+    {
+      "task_title": "More snow shoveling",
+      "task_doneBy": "2019-05-17",
+      "task_completed": false,
+      "userId": "1",
+      "id": 15
+    },
+    {
+      "task_title": "Wash fur coat",
+      "task_doneBy": "2019-05-15",
+      "task_completed": false,
+      "userId": "9",
+      "id": 16
+    },
+    {
+      "task_title": "dfgasjkdgflask",
+      "task_doneBy": "2019-05-13",
+      "task_completed": false,
+      "userId": "2",
+      "id": 17
+    }
+  ],
+  "events": [
+    {
+      "id": 3,
+      "userId": 1,
+      "event_name": "This is an event name",
+      "event_details": "This is an even detail",
+      "event_date": "2011-07-14"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "event_name": "This is an event name",
+      "event_details": "This is an even detail",
+      "event_date": "2010-07-14"
+    },
+    {
+      "event_name": "Walking to Kings Landing",
+      "event_details": "Winter is coming yo",
+      "event_date": "2019-05-25",
+      "id": 7
+    },
+    {
+      "event_name": "TESTES",
+      "event_details": "TESTE",
+      "event_date": "2019-05-08",
+      "id": 9
+    },
+    {
+      "event_name": "Walk to Kings Landing",
+      "event_details": "Winter is coming",
+      "event_date": "2019-05-08",
+      "id": 10
+    },
+    {
+      "event_name": "Run to Kings Landing",
+      "event_details": "Winter is Coming",
+      "event_date": "2019-05-11",
+      "userId": "1",
+      "id": 11
+    },
+    {
+      "name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 12
+    },
+    {
+      "name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 13
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2020,
+      "id": 14
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 15
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 16
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": "2019-05-31",
+      "id": 17
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test2",
+      "event_date": "2019-05-30",
+      "id": 18
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "userId": 1,
+      "otherFriendsId": 3
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "otherFriendsId": 2
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "otherFriendsId": 4
+    }
+  ]
+}
