@@ -274,85 +274,11 @@
   ],
   "events": [
     {
-      "id": 3,
-      "userId": 1,
-      "event_name": "This is an event name",
-      "event_details": "This is an even detail",
-      "event_date": "2011-07-14"
-    },
-    {
       "id": 6,
       "userId": 1,
       "event_name": "This is an event name",
       "event_details": "This is an even detail",
       "event_date": "2010-07-14"
-    },
-    {
-      "event_name": "Walking to Kings Landing",
-      "event_details": "Winter is coming yo",
-      "event_date": "2019-05-25",
-      "id": 7
-    },
-    {
-      "event_name": "TESTES",
-      "event_details": "TESTE",
-      "event_date": "2019-05-08",
-      "id": 9
-    },
-    {
-      "event_name": "Walk to Kings Landing",
-      "event_details": "Winter is coming",
-      "event_date": "2019-05-08",
-      "id": 10
-    },
-    {
-      "event_name": "Run to Kings Landing",
-      "event_details": "Winter is Coming",
-      "event_date": "2019-05-11",
-      "userId": "1",
-      "id": 11
-    },
-    {
-      "name": "Test1",
-      "event_details": "Test1",
-      "event_date": 2019,
-      "id": 12
-    },
-    {
-      "name": "Test1",
-      "event_details": "Test1",
-      "event_date": 2019,
-      "id": 13
-    },
-    {
-      "event_name": "Test1",
-      "event_details": "Test1",
-      "event_date": 2020,
-      "id": 14
-    },
-    {
-      "event_name": "Test1",
-      "event_details": "Test1",
-      "event_date": 2019,
-      "id": 15
-    },
-    {
-      "event_name": "Test1",
-      "event_details": "Test1",
-      "event_date": 2019,
-      "id": 16
-    },
-    {
-      "event_name": "Test1",
-      "event_details": "Test1",
-      "event_date": "2019-05-31",
-      "id": 17
-    },
-    {
-      "event_name": "Test1",
-      "event_details": "Test2",
-      "event_date": "2019-05-30",
-      "id": 18
     }
   ],
   "friends": [
