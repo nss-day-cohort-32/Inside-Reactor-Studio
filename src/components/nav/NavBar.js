@@ -23,6 +23,9 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/messages">Messages</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/events/new">New Event</Link>
+                    </li>
                 </ul>
             </nav>
         )
