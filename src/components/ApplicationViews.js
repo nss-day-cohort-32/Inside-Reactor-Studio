@@ -45,45 +45,14 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-  addEvent = event =>
-    EventManager.post(event)
-      .then(() => EventManager.getAll('events'))
-      .then(events =>
-        this.setState({
-          events: events
-        })
-      )
-      .then(() => this.props.history.push('events'));
-  deleteEvent = id => {
-    const newState = {};
-    EventManager.deleteEvent(id)
-      .then(EventManager.getAll)
-      .then(events => {
-        console.log('events', events);
-        newState.events = events;
-      })
-      .then(() => {
-        this.props.history.push('/events');
-        this.setState(newState);
-      });
-  };
+
   render() {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
-        <Route
-          exact
-          path="/events"
-          render={props => {
-            return (
-              <EventList
-                events={this.state.events}
-                {...props}
-                deleteEvent={this.deleteEvent}
-              />
-            );
-          }}
-        />
+        <Route exact path="/events" render={props => {
+          return <EventList {...props} />
+        }} />
         <Route
           exact
           path="/events/new"

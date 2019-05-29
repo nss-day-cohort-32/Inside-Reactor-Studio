@@ -3,18 +3,29 @@ import './EventList.css';
 import { Link } from 'react-router-dom';
 import EventCard from './EventCard';
 import EventManager from '../../modules/EventManager';
+
 export default class EventList extends Component {
   state = {
     events: []
   };
+
+
+  deleteEvent = id => {
+    const newState = {};
+    EventManager.deleteEvent(id)
+      .then(EventManager.getAll)
+      .then(events => {
+        console.log('events', events);
+        newState.events = events;
+        this.setState(newState);
+      })
+  };
+
   componentDidMount() {
     const newState = {};
-
-    EventManager.getAll().then(allEvents => {
-      this.setState({
-        events: allEvents
-      });
-    });
+    EventManager.getAll("events")
+      .then(events => newState.events = events)
+      .then(() => this.setState(newState))
   }
 
   render() {
@@ -34,7 +45,7 @@ export default class EventList extends Component {
                 key={item.id}
                 event={item}
                 {...this.props}
-                deleteEvent={this.props.deleteEvent}
+                deleteEvent={this.deleteEvent}
               />
             );
           })}

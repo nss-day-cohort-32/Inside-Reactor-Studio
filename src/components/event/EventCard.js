@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
+import EventManager from '../../modules/EventManager';
+
 class EventCard extends Component {
     state = {
         saveDisabled: false
     };
 
-    handleClick = e => {
-        console.log('click', e, this.props.event.id);
-        this.setState({
-            saveDisabled: true
-        });
-        this.props.deleteEvent(this.props.event.id);
-    };
-
     render() {
         return (
-            <article className="event-card">
+            <article key={this.props.event.id} className="event-card">
                 <h4>{this.props.event.event_name}</h4>
                 <h6>{this.props.event.event_details}</h6>
                 <h6>{this.props.event.event_date}</h6>
-                <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
-                    Delete
-        </button>
+                <button onClick={
+                    () => {
+                        this.setState(
+                            { saveDisabled: true },
+                            () => this.props.deleteEvent(this.props.event.id)
+                        )
+                    }
+                }
+                    disabled={this.state.saveDisabled}
+                >Delete</button>
                 <hr />
             </article>
         );
