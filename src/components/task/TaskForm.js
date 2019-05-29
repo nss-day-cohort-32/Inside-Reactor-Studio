@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './EventList.css';
+
 
 export default class EventForm extends Component {
   // Set initial state
   state = {
-    event_name: '',
-    event_details: '',
-    event_date: ''
+    task_title: '',
+    task_doneBy: '',
+    task_completed: ''
   };
 
   // Update state whenever an input field is edited
@@ -16,17 +16,17 @@ export default class EventForm extends Component {
     this.setState(stateToChange);
   };
 
-  saveNewEvent = evt => {
+  saveNewTask = evt => {
     evt.preventDefault();
 
     const event = {
-      event_name: this.state.event_name,
-      event_details: this.state.event_details,
+      task_title: this.state.task_title,
+      task_doneBy: this.state.task_doneBy,
       // Make sure the event_date is saved to the database as a number since it is a foreign key.
-      event_date: this.state.event_date
+      task_completed: this.state.task_completed
     };
 
-    this.props.addEvent(event).then(() => this.props.history.push('/events'));
+    this.props.addTask(event).then(() => this.props.history.push('/tasks'));
   };
 
   render() {

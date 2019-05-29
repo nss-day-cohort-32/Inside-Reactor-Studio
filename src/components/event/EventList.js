@@ -1,39 +1,45 @@
-import React, { Component } from 'react'
-import "./EventList.css"
-import EventCard from "./EventCard";
-import { Link } from "react-router-dom"
-
-
-
-
+import React, { Component } from 'react';
+import './EventList.css';
+import { Link } from 'react-router-dom';
+import EventCard from './EventCard';
+import EventManager from '../../modules/EventManager';
 export default class EventList extends Component {
+  state = {
+    events: []
+  };
+  componentDidMount() {
+    const newState = {};
+
+    EventManager.getAll().then(allEvents => {
+      this.setState({
+        events: allEvents
+      });
+    });
+  }
+
   render() {
     return (
-      <section className="events">
+      <div className="events">
+        <h2>Events</h2>
         <div className="eventButton">
-          <button><Link to="/events/new">
-            Add Event
-                  </Link></button>
+          <button>
+            <Link to="/events/new">Add Event</Link>
+          </button>
         </div>
         {/* <h2>All Events</h2> */}
-
-        {this.props.events.map(event => (
-          <EventCard event={event} />
-          // <div key={event.id} className="card">
-          //   <div className="card-body">
-          //     <h5 className="card-title">
-          //       {event.event_name}
-          //       <br />
-          //       {event.event_details}
-          //       <br />
-          //       {event.event_date}
-          //     </h5>
-          //     <button className="deleteEvent">Delete</button>
-          //     <button className="editEvent">Edit</button>
-          //   </div>
-          // </div>
-        ))}
-      </section>
+        <section className="events">
+          {this.state.events.map(item => {
+            return (
+              <EventCard
+                key={item.id}
+                event={item}
+                {...this.props}
+                deleteEvent={this.props.deleteEvent}
+              />
+            );
+          })}
+        </section>
+      </div>
     );
   }
 }
