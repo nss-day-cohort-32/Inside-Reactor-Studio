@@ -24,7 +24,7 @@ export default class EventForm extends Component {
         event_name: this.state.event_name,
         event_details: this.state.event_details,
         // Make sure the event_date is saved to the database as a number since it is a foreign key.
-        event_date: parseInt(this.state.event_date)
+        event_date: this.state.event_date
       };
 
       this.props.addEvent(event)
@@ -63,7 +63,8 @@ export default class EventForm extends Component {
             <input
               type="date"
               required
-              name="events"
+              className="form-control"
+              name="event_date"
               id="event_date"
               onChange={this.handleFieldChange}
             >

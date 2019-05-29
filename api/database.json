@@ -294,12 +294,6 @@
       "id": 7
     },
     {
-      "event_name": "Walking south",
-      "event_details": "Winter is coming",
-      "event_date": "2019-05-01",
-      "id": 8
-    },
-    {
       "event_name": "TESTES",
       "event_details": "TESTE",
       "event_date": "2019-05-08",
@@ -335,6 +329,30 @@
       "event_details": "Test1",
       "event_date": 2020,
       "id": 14
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 15
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": 2019,
+      "id": 16
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test1",
+      "event_date": "2019-05-31",
+      "id": 17
+    },
+    {
+      "event_name": "Test1",
+      "event_details": "Test2",
+      "event_date": "2019-05-30",
+      "id": 18
     }
   ],
   "friends": [

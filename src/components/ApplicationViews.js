@@ -36,14 +36,31 @@ import EventForm from "./event/EventForm"
       })
     ).then(() => this.props.history.push("events"))
 
-  // isAuthenticated = () => sessionStorage.getItem("credentials") !== null
+    deleteEvent = (id) => {
+      const newState = {};
+      EventManager.deleteEvent(id)
+        .then(EventManager.getAll("events"))
+        .then(events => {
+          console.log("events", events);
+          newState.events = events;
+        })
+        .then(() => {
+          this.props.history.push('/events');
+          this.setState(newState);
+        })
+
+      
+
+    }
+
+ 
 
   render() {
     console.log('ApplicationViews render')
     return (
       <React.Fragment>
         <Route exact path="/events" render={(props) => {
-          return <EventList events={this.state.events}/>
+          return <EventList events={this.state.events} {...props} deleteEvent={this.deleteEvent}/>
         }} />
         <Route exact path="/events/new" render={(props) => {
           return <EventForm {...props} events={this.state.events}

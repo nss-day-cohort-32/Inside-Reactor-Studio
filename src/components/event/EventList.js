@@ -3,6 +3,8 @@ import "./EventList.css"
 import { Link } from "react-router-dom"
 
 
+
+
 export default class EventList extends Component {
     render() {
         return (
@@ -23,6 +25,8 @@ export default class EventList extends Component {
                       <br />
                       {event.event_date}
                     </h5>
+                    <button className="deleteEvent">Delete</button>
+                    <button className="editEvent">Edit</button>
                   </div>
                 </div>
               ))}
