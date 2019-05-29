@@ -33,7 +33,7 @@ class ApplicationViews extends Component {
     console.log('ApplicationViews render')
     return (
       <React.Fragment>
-        <Route path="/" render={(props) => {
+        <Route exact path="/" render={(props) => {
           return <Welcome />
         }} />
         <Route exact path="/events" render={(props) => {
