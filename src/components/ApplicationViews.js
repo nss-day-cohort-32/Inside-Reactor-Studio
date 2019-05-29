@@ -3,6 +3,7 @@ import { withRouter } from 'react-router'
 import React, { Component } from 'react';
 import EventList from "./event/EventList"
 import EventManager from "../modules/EventManager"
+import EventForm from "./event/EventForm"
 
  class ApplicationViews extends Component {
   state = {
@@ -26,6 +27,15 @@ import EventManager from "../modules/EventManager"
 
   }
 
+  addEvent = event => 
+   EventManager.post(event)
+    .then(() => EventManager.getAll("events"))
+    .then(events => 
+      this.setState({
+        events: events
+      })
+    ).then(() => this.props.history.push("events"))
+
   // isAuthenticated = () => sessionStorage.getItem("credentials") !== null
 
   render() {
@@ -33,7 +43,11 @@ import EventManager from "../modules/EventManager"
     return (
       <React.Fragment>
         <Route exact path="/events" render={(props) => {
-          return <EventList events = {this.state.events}/>
+          return <EventList events={this.state.events}/>
+        }} />
+        <Route exact path="/events/new" render={(props) => {
+          return <EventForm {...props} events={this.state.events}
+          addEvent={this.addEvent} />
         }} />
       </React.Fragment>
     )}
