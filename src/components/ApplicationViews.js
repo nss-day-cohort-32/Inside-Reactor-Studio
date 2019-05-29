@@ -2,6 +2,7 @@ import { Route } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import React, { Component } from 'react';
 import EventList from "./event/EventList"
+import EventCard from "./event/EventCard";
 import EventManager from "../modules/EventManager"
 import Welcome from "./Welcome"
 import EventForm from "./event/EventForm"
