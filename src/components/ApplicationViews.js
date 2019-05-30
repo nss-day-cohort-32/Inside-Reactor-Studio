@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
 import EventList from './event/EventList';
@@ -7,9 +7,12 @@ import EventForm from './event/EventForm';
 import TaskManager from '../modules/TaskManager';
 import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
+import Welcome from "./signup/Welcome";
+import SignupForm from "./signup/signup";
+
 class ApplicationViews extends Component {
   state = {
-    login: [],
+    signup: [],
     news: [],
     tasks: [],
     messages: [],
@@ -46,10 +49,13 @@ class ApplicationViews extends Component {
       });
   };
 
+  isAuthenticated = () => sessionStorage.getItem('credentials') !== null;
+
   render() {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
+        <Route exact path="/" component={Welcome} />
         <Route exact path="/events" render={props => {
           return <EventList {...props} />
         }} />
@@ -62,6 +68,17 @@ class ApplicationViews extends Component {
                 {...props}
                 events={this.state.events}
                 addEvent={this.addEvent}
+              />
+            );
+          }}
+        />
+        <Route exact path="/signup"
+          render={props => {
+            return (
+              <SignupForm
+                {...props}
+                users={this.state.users}
+                addUser={this.addUser}
               />
             );
           }}
