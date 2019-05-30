@@ -8,16 +8,19 @@ export default class SignupForm extends Component {
     // Set initial state
     state = {
         userName: '',
-        userPassword: ''
+        password: '',
+        currentUser: {}
     };
 
     addUser = user =>
         LoginManager.post(user)
             // .then(() => LoginManager.getAll('users'))
-            .then(users =>
+            .then(newUser => {
                 this.setState({
-                    users: users
+                    currentUser: user
                 })
+                console.log("new user", newUser)
+            }
             )
     // .then(() => this.props.history.push('users'));
 
@@ -35,6 +38,7 @@ export default class SignupForm extends Component {
             user_name: this.state.user_name,
             password: this.state.password,
         };
+        console.log("user", user)
 
         this.addUser(user).then(() => this.props.history.push('/'));
     };
@@ -57,11 +61,11 @@ export default class SignupForm extends Component {
                     <div className="form-group">
                         <label htmlFor="user_password">Password</label>
                         <input
-                            type="text"
+                            type="password"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="user_password"
+                            id="password"
                             placeholder="User Password"
                         />
                     </div>

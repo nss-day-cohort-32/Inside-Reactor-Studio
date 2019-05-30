@@ -9,6 +9,7 @@ import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
 import Welcome from "./signup/Welcome";
 import SignupForm from "./signup/signup";
+import Login from "./signup/login";
 
 class ApplicationViews extends Component {
   state = {
@@ -56,6 +57,7 @@ class ApplicationViews extends Component {
     return (
       <React.Fragment>
         <Route exact path="/" component={Welcome} />
+        <Route path="/login" component={Login} />
         <Route exact path="/events" render={props => {
           return <EventList {...props} />
         }} />
