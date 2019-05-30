@@ -7,6 +7,9 @@ import EventForm from './event/EventForm';
 import TaskManager from '../modules/TaskManager';
 import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
+import NewsList from './news/NewsList'
+import NewsForm from "./news/NewsForm"
+import NewsManager from "../modules/NewsManager"
 
 class ApplicationViews extends Component {
   state = {
@@ -73,9 +76,33 @@ class ApplicationViews extends Component {
       })
       .then(() => {
         this.props.history.push('/events');
-        this.setState(newState);
+         this.setState(newState);
       });
   };
+
+  addArticle = article =>
+    NewsManager.post(article)
+      .then(() => NewsManager.getAll('articles'))
+      .then(articles => 
+        this.setState({
+          news: articles
+        })
+      )
+      .then(() => this.props.history.push('articles'));
+
+    deleteArticle = id => {
+      const newState = {};
+      NewsManager.deleteArticle(id)
+        .then(NewsManager.getAll)
+        .then(articles => {
+          console.log('articles', articles);
+          newState.articles = articles;
+        })
+        .then(() => {
+          this.props.history.push('./articles');
+          this.setState(newState);
+        })
+    }
 
   render() {
     console.log('ApplicationViews render');
@@ -132,6 +159,32 @@ class ApplicationViews extends Component {
               />
             );
           }}
+        />
+        <Route 
+        exact
+        path="/articles"
+        render={props => {
+          return(
+            <NewsList
+            news={this.state.news}
+            {...props}
+            deleteArticle={this.deleteArticle}
+            />
+          );
+        }}
+        />
+        <Route
+        exact
+        path="/articles/new"
+        render={props => {
+          return(
+            <NewsForm
+            {...props}
+            news={this.state.news}
+            addArticle={this.addArticle}
+            />
+          );
+        }}
         />
       </React.Fragment>
     );

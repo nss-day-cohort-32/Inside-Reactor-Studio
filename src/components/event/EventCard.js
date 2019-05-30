@@ -5,7 +5,7 @@ class EventCard extends Component {
   };
 
   handleClick = e => {
-    console.log('click', e, this.props.event.id);
+    console.log('click', e, this.props.article.id);
     this.setState({
       saveDisabled: true
     });

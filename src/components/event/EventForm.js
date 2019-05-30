@@ -67,7 +67,6 @@ export default class EventForm extends Component {
             />
           </div>
           <button
-            className="button"
             onClick={this.saveNewEvent}
             className="btn btn-primary"
           >
