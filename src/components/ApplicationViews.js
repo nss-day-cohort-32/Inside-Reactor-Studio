@@ -130,7 +130,7 @@ class ApplicationViews extends Component {
               );
             }}
           />
-          <Route
+          {/* <Route
             exact
             path="/tasks"
             render={props => {
@@ -155,7 +155,7 @@ class ApplicationViews extends Component {
                 />
               );
             }}
-          />
+          /> */}
         </React.Fragment>
       </div>
     );
