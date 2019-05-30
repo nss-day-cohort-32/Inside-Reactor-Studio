@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import EventManager from '../../modules/EventManager';
-
 class EventCard extends Component {
     state = {
         saveDisabled: false

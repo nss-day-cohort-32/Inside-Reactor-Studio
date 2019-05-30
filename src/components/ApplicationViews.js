@@ -2,14 +2,12 @@ import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
 import EventList from './event/EventList';
-import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
 import TaskManager from '../modules/TaskManager';
 import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
-import NewsManager from "../modules/NewsManager"
 
 class ApplicationViews extends Component {
   state = {
