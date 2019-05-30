@@ -13,6 +13,13 @@ import TaskForm from './task/TaskForm';
 class ApplicationViews extends Component {
   state = {
     login: [],
+    tasks: [
+      {
+        id: 1,
+        title: 'Test Task',
+        completed: true
+      }
+    ],
     news: [],
     messages: [],
     friends: []
@@ -27,6 +34,7 @@ class ApplicationViews extends Component {
   //     });
   //   });
   // }
+  
 
   addTask = task =>
     TaskManager.post(task)
@@ -52,8 +60,6 @@ class ApplicationViews extends Component {
       });
   };
 
-
-
   addEvent = event =>
     EventManager.post(event)
       .then(() => EventManager.getAll('events'))
@@ -78,63 +84,80 @@ class ApplicationViews extends Component {
       });
   };
 
+  toggleComplete = id => {
+    this.setState({
+      tasks: this.state.tasks.map(task => {
+        if (task.id === id) {
+          task.completed = !task.completed;
+        }
+        return task;
+      })
+    });
+  };
+
   render() {
     console.log('ApplicationViews render');
     return (
-      <React.Fragment>
-        <Route
-          exact
-          path="/events"
-          render={props => {
-            return (
-              <EventList
-                events={this.state.events}
-                {...props}
-                deleteEvent={this.deleteEvent}
-              />
-            );
-          }}
+      <div className="app">
+        <TaskList
+          tasks={this.state.tasks}
+          toggleComplete={this.toggleComplete}
         />
-        <Route
-          exact
-          path="/events/new"
-          render={props => {
-            return (
-              <EventForm
-                {...props}
-                events={this.state.events}
-                addEvent={this.addEvent}
-              />
-            );
-          }}
-        />
-        <Route
-          exact
-          path="/tasks"
-          render={props => {
-            return (
-              <TaskList
-                tasks={this.state.tasks}
-                {...props}
-                deleteTask={this.deleteTask}
-              />
-            );
-          }}
-        />
-        <Route
-          exact
-          path="/tasks/new"
-          render={props => {
-            return (
-              <TaskForm
-                {...props}
-                tasks={this.state.tasks}
-                addTask={this.addTask}
-              />
-            );
-          }}
-        />
-      </React.Fragment>
+        <React.Fragment>
+          <Route
+            exact
+            path="/events"
+            render={props => {
+              return (
+                <EventList
+                  events={this.state.events}
+                  {...props}
+                  deleteEvent={this.deleteEvent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/events/new"
+            render={props => {
+              return (
+                <EventForm
+                  {...props}
+                  events={this.state.events}
+                  addEvent={this.addEvent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/tasks"
+            render={props => {
+              return (
+                <TaskList
+                  tasks={this.state.tasks}
+                  {...props}
+                  deleteTask={this.deleteTask}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/tasks/new"
+            render={props => {
+              return (
+                <TaskForm
+                  {...props}
+                  tasks={this.state.tasks}
+                  addTask={this.addTask}
+                />
+              );
+            }}
+          />
+        </React.Fragment>
+      </div>
     );
   }
 }
