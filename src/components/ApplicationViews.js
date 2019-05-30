@@ -7,7 +7,6 @@ import EventForm from './event/EventForm';
 import TaskManager from '../modules/TaskManager';
 import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
-
 class ApplicationViews extends Component {
   state = {
     login: [],
@@ -16,17 +15,14 @@ class ApplicationViews extends Component {
     messages: [],
     friends: []
   };
-
   // componentDidMount() {
-  //   const newState = {};
-
-  //   EventManager.getAll().then(allEvents => {
-  //     this.setState({
-  //       events: allEvents
-  //     });
+  //  const newState = {};
+  //  EventManager.getAll().then(allEvents => {
+  //   this.setState({
+  //    events: allEvents
   //   });
+  //  });
   // }
-
   addTask = task =>
     TaskManager.post(task)
       .then(() => TaskManager.getAll('tasks'))
@@ -35,8 +31,7 @@ class ApplicationViews extends Component {
           tasks: tasks
         })
       );
-  //  .then(() => this.props.history.push("tasks"))
-
+  // .then(() => this.props.history.push("tasks"))
   deleteTask = id => {
     const newState = {};
     TaskManager.deleteTask(id)
@@ -51,49 +46,13 @@ class ApplicationViews extends Component {
       });
   };
 
-
-
-  addEvent = event =>
-    EventManager.post(event)
-      .then(() => EventManager.getAll('events'))
-      .then(events =>
-        this.setState({
-          events: events
-        })
-      )
-      .then(() => this.props.history.push('events'));
-
-  deleteEvent = id => {
-    const newState = {};
-    EventManager.deleteEvent(id)
-      .then(EventManager.getAll)
-      .then(events => {
-        console.log('events', events);
-        newState.events = events;
-      })
-      .then(() => {
-        this.props.history.push('/events');
-        this.setState(newState);
-      });
-  };
-
   render() {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
-        <Route
-          exact
-          path="/events"
-          render={props => {
-            return (
-              <EventList
-                events={this.state.events}
-                {...props}
-                deleteEvent={this.deleteEvent}
-              />
-            );
-          }}
-        />
+        <Route exact path="/events" render={props => {
+          return <EventList {...props} />
+        }} />
         <Route
           exact
           path="/events/new"
@@ -137,5 +96,5 @@ class ApplicationViews extends Component {
     );
   }
 }
-
 export default withRouter(ApplicationViews);
+
