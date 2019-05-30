@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EventManager from '../../modules/EventManager';
 import './EventList.css';
 
 export default class EventForm extends Component {
@@ -8,6 +9,16 @@ export default class EventForm extends Component {
     event_details: '',
     event_date: ''
   };
+
+  addEvent = event =>
+    EventManager.post(event)
+      .then(() => EventManager.getAll('events'))
+      .then(events =>
+        this.setState({
+          events: events
+        })
+      )
+      .then(() => this.props.history.push('events'));
 
   // Update state whenever an input field is edited
   handleFieldChange = evt => {
@@ -26,7 +37,7 @@ export default class EventForm extends Component {
       event_date: this.state.event_date
     };
 
-    this.props.addEvent(event).then(() => this.props.history.push('/events'));
+    this.addEvent(event).then(() => this.props.history.push('/events'));
   };
 
   render() {

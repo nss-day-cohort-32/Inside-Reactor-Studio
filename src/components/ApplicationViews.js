@@ -19,17 +19,14 @@ class ApplicationViews extends Component {
     messages: [],
     friends: []
   };
-
   // componentDidMount() {
-  //   const newState = {};
-
-  //   EventManager.getAll().then(allEvents => {
-  //     this.setState({
-  //       events: allEvents
-  //     });
+  //  const newState = {};
+  //  EventManager.getAll().then(allEvents => {
+  //   this.setState({
+  //    events: allEvents
   //   });
+  //  });
   // }
-
   addTask = task =>
     TaskManager.post(task)
       .then(() => TaskManager.getAll('tasks'))
@@ -38,8 +35,7 @@ class ApplicationViews extends Component {
           tasks: tasks
         })
       );
-  //  .then(() => this.props.history.push("tasks"))
-
+  // .then(() => this.props.history.push("tasks"))
   deleteTask = id => {
     const newState = {};
     TaskManager.deleteTask(id)
@@ -54,73 +50,13 @@ class ApplicationViews extends Component {
       });
   };
 
-
-
-  addEvent = event =>
-    EventManager.post(event)
-      .then(() => EventManager.getAll('events'))
-      .then(events =>
-        this.setState({
-          events: events
-        })
-      )
-      .then(() => this.props.history.push('events'));
-
-  deleteEvent = id => {
-    const newState = {};
-    EventManager.deleteEvent(id)
-      .then(EventManager.getAll)
-      .then(events => {
-        console.log('events', events);
-        newState.events = events;
-      })
-      .then(() => {
-        this.props.history.push('/events');
-         this.setState(newState);
-      });
-  };
-
-  addArticle = article =>
-    NewsManager.post(article)
-      .then(() => NewsManager.getAll('articles'))
-      .then(articles => 
-        this.setState({
-          news: articles
-        })
-      )
-      .then(() => this.props.history.push('articles'));
-
-    deleteArticle = id => {
-      const newState = {};
-      NewsManager.deleteArticle(id)
-        .then(NewsManager.getAll)
-        .then(articles => {
-          console.log('articles', articles);
-          newState.articles = articles;
-        })
-        .then(() => {
-          this.props.history.push('./articles');
-          this.setState(newState);
-        })
-    }
-
   render() {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
-        <Route
-          exact
-          path="/events"
-          render={props => {
-            return (
-              <EventList
-                events={this.state.events}
-                {...props}
-                deleteEvent={this.deleteEvent}
-              />
-            );
-          }}
-        />
+        <Route exact path="/events" render={props => {
+          return <EventList {...props} />
+        }} />
         <Route
           exact
           path="/events/new"
@@ -190,5 +126,5 @@ class ApplicationViews extends Component {
     );
   }
 }
-
 export default withRouter(ApplicationViews);
+

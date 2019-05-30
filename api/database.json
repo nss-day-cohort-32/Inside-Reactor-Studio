@@ -272,15 +272,7 @@
       "id": 17
     }
   ],
-  "events": [
-    {
-      "id": 6,
-      "userId": 1,
-      "event_name": "This is an event name",
-      "event_details": "This is an even detail",
-      "event_date": "2010-07-14"
-    }
-  ],
+  "events": [],
   "friends": [
     {
       "id": 1,
