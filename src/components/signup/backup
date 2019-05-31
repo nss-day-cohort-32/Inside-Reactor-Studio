@@ -1,0 +1,18 @@
+export default class Signup extends Component {
+    render() {
+        return (
+            <div>
+                <form className="form-signin">
+                    <h2 className="form-signin-heading">Please sign up</h2>
+                    <label for="inputName" className="sr-only">User Name</label>
+                    <input type="name" onChange={this.handleNameChange} id="user_name" className="form-control" placeholder="User Name" required autofocus />
+                    <label for="inputPassword" className="sr-only">Password</label>
+                    <input type="password" onChange={this.handlePasswordChange} id="password" className="form-control" placeholder="Password" required />
+
+                    <button className="btn btn-lg btn-primary btn-block" onClick={this.signUp} type="button">Sign up</button>
+                </form>
+            </div>
+
+        )
+    }
+}
