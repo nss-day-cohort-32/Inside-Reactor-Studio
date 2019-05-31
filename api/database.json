@@ -272,6 +272,12 @@
       "event_details": "test",
       "event_date": "2019-06-18",
       "id": 12
+    },
+    {
+      "event_name": "test",
+      "event_details": "test",
+      "event_date": "1981-04-04",
+      "id": 13
     }
   ],
   "friends": [
