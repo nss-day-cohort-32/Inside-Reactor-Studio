@@ -42,9 +42,9 @@ export class TaskCard extends Component {
   }
 }
 
-TaskCard.propTypes = {
-  task: PropTypes.object.isRequired
-};
+// TaskCard.propTypes = {
+//   task: PropTypes.object.isRequired
+// };
 
 const btnStyle = {
   background: 'rgb(46, 139, 250)',
