@@ -141,6 +141,19 @@ class ApplicationViews extends Component {
               );
             }}
           />
+                    <Route
+            exact
+            path="/messages"
+            render={props => {
+              return (
+                <MessageList
+                  messages={this.state.messages}
+                  {...props}
+                  deleteMessage={this.deleteMessage}
+                />
+              );
+            }}
+          />
         </div>
       </React.Fragment>
     );
