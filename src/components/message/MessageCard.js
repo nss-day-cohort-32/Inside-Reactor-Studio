@@ -17,9 +17,9 @@ class MessageCard extends Component {
   render() {
     return (
       <div className="message-card">
-        <h4>{this.props.messages.userName}</h4>
-        <h6>{this.props.messages.message_content}</h6>
-        <h6>{this.props.messages.date}</h6>
+        <h4>{this.props.message.userName}</h4>
+        <h6>{this.props.message.message_content}</h6>
+        <h6>{this.props.message.date}</h6>
         <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
           Delete
         </button>

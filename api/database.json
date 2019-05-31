@@ -141,25 +141,11 @@
       "id": 4
     },
     {
-      "message_content": "Immm the King of the north!",
-      "userId": "7",
-      "userName": "Rob Stark",
-      "date": "2017-05-13T20:06:50.620Z",
-      "id": 7
-    },
-    {
       "message_content": "Winter is coming",
       "userId": "1",
       "userName": "Ned Stark",
       "date": "2019-05-14T04:28:27.432Z",
       "id": 9
-    },
-    {
-      "message_content": "How is everyone doing down in King's Landing?",
-      "userId": "9",
-      "userName": "Sansa",
-      "date": "2019-05-14T04:44:45.745Z",
-      "id": 10
     }
   ],
   "articles": [
