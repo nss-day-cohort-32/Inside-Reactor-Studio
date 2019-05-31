@@ -1,50 +1,56 @@
 import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
+import Header from '../components/layout/Header';
+
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
-import TaskManager from '../modules/TaskManager';
+
 import TaskList from './task/TaskList';
+<<<<<<< HEAD
 import TaskForm from './task/TaskForm';
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
 import NewsEditForm from "./news/NewsEditForm"
 
+=======
+>>>>>>> master
 class ApplicationViews extends Component {
   state = {
     login: [],
     news: [],
-    tasks: [],
     messages: [],
     friends: []
   };
-  // componentDidMount() {
-  //  const newState = {};
-  //  EventManager.getAll().then(allEvents => {
-  //   this.setState({
-  //    events: allEvents
-  //   });
-  //  });
-  // }
-  addTask = task =>
-    TaskManager.post(task)
-      .then(() => TaskManager.getAll('tasks'))
-      .then(tasks =>
+
+  componentDidMount() {
+    EventManager.getAll().then(allEvents => {
+      this.setState({
+        events: allEvents
+      });
+    });
+  }
+
+  addEvent = event =>
+    EventManager.post(event)
+      .then(() => EventManager.getAll('events'))
+      .then(events =>
         this.setState({
-          tasks: tasks
+          events: events
         })
-      );
-  // .then(() => this.props.history.push("tasks"))
-  deleteTask = id => {
+      )
+      .then(() => this.props.history.push('events'));
+
+  deleteEvent = id => {
     const newState = {};
-    TaskManager.deleteTask(id)
-      .then(TaskManager.getAll)
-      .then(tasks => {
-        console.log('tasks', tasks);
-        newState.tasks = tasks;
+    EventManager.deleteEvent(id)
+      .then(EventManager.getAll)
+      .then(events => {
+        console.log('events', events);
+        newState.events = events;
       })
       .then(() => {
-        this.props.history.push('/tasks');
+        this.props.history.push('/events');
         this.setState(newState);
       });
   };
@@ -53,48 +59,45 @@ class ApplicationViews extends Component {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
-        <Route exact path="/events" render={props => {
-          return <EventList {...props} />
-        }} />
-        <Route
-          exact
-          path="/events/new"
-          render={props => {
-            return (
-              <EventForm
-                {...props}
-                events={this.state.events}
-                addEvent={this.addEvent}
-              />
-            );
-          }}
-        />
-        <Route
-          exact
-          path="/tasks"
-          render={props => {
-            return (
-              <TaskList
-                tasks={this.state.tasks}
-                {...props}
-                deleteTask={this.deleteTask}
-              />
-            );
-          }}
-        />
-        <Route
-          exact
-          path="/tasks/new"
-          render={props => {
-            return (
-              <TaskForm
-                {...props}
-                tasks={this.state.tasks}
-                addTask={this.addTask}
-              />
-            );
-          }}
-        />
+        <div className="container">
+          {/* HEADER */}
+          <Header />
+          {/* TASKS */}
+          <Route
+            exact
+            path="/tasks"
+            render={props => {
+              return <TaskList />;
+            }}
+          />
+          {/* EVENTS */}
+          <Route
+            exact
+            path="/events"
+            render={props => {
+              return (
+                <EventList
+                  events={this.state.events}
+                  {...props}
+                  deleteEvent={this.deleteEvent}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/events/new"
+            render={props => {
+              return (
+                <EventForm
+                  {...props}
+                  events={this.state.events}
+                  addEvent={this.addEvent}
+                />
+              );
+            }}
+          />
+        </div>
         <Route 
         exact
         path="/articles"
