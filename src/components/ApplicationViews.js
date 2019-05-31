@@ -1,15 +1,18 @@
 import { Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
-// import Header from '../components/layout/Header';
+// import Header from '../layout/Header';
+import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
-import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
 import TaskList from './task/TaskList';
-import TaskEditForm from './task/TaskEditForm';
-import Welcome from './signup/Welcome';
-import SignupForm from './signup/signup';
-import Login from './signup/login';
+import TaskEditForm from './task/TaskEditForm'
+import NewsList from './news/NewsList'
+import NewsForm from "./news/NewsForm"
+import NewsEditForm from "./news/NewsEditForm"
+import Welcome from "./signup/Welcome";
+import SignupForm from "./signup/signup";
+import Login from "./signup/login";
 
 class ApplicationViews extends Component {
   state = {
@@ -123,6 +126,37 @@ class ApplicationViews extends Component {
             }}
           />
         </div>
+        <Route 
+        exact
+        path="/articles"
+        render={props => {
+          return(
+            <NewsList
+            news={this.state.news}
+            {...props}
+            deleteArticle={this.deleteArticle}
+            />
+          );
+        }}
+        />
+        <Route
+        exact
+        path="/articles/new"
+        render={props => {
+          return(
+            <NewsForm
+            {...props}
+            news={this.state.news}
+            addArticle={this.addArticle}
+            />
+          );
+        }}
+        />
+        <Route
+  exact path="/articles/:articleId(\d+)/edit" render={props => {
+    return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle}/>
+  }}
+/>
       </React.Fragment>
     );
   }
