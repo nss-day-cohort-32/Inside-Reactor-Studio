@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
+import EventEditForm from './event/EventEditForm'
 import TaskList from './task/TaskList';
 import TaskEditForm from './task/TaskEditForm'
 import NewsList from './news/NewsList'
@@ -126,6 +127,18 @@ class ApplicationViews extends Component {
             }}
           />
         </div>
+        <Route
+            path="/events/:eventId(\d+)/edit"
+            render={props => {
+              return (
+                <EventEditForm
+                  {...props}
+                  updateTask={this.updateTask}
+                  tasks={this.state.tasks}
+                />
+              );
+            }}
+          />
         <Route 
         exact
         path="/articles"

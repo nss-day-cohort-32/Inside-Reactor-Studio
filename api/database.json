@@ -254,10 +254,10 @@
   ],
   "tasks": [
     {
+      "id": 1,
       "task_title": "Josh Task",
-      "task_doneBy": "2019-05-31",
-      "task_completed": false,
-      "id": 1
+      "task_doneBy": "2019-05-15",
+      "task_completed": false
     },
     {
       "task_title": "Joey Task",
@@ -280,28 +280,16 @@
   ],
   "events": [
     {
-      "event_name": "Event ",
-      "event_details": "this is an event",
-      "event_date": "2019-05-04",
-      "id": 16
+      "id": 17,
+      "event_name": "Super Party",
+      "event_details": "WWE thrashdown supra edition XXX bring your frenz -love joey",
+      "event_date": "2019-05-03"
     },
     {
-      "event_name": "do a thing",
-      "event_details": "find some stuff",
-      "event_date": "2019-05-03",
-      "id": 17
-    },
-    {
-      "event_name": "test",
-      "event_details": "test",
-      "event_date": "2019-05-04",
-      "id": 18
-    },
-    {
-      "event_name": "party ",
-      "event_details": "its gonna be a party",
-      "event_date": "2019-05-29",
-      "id": 19
+      "id": 18,
+      "event_name": "Showdown",
+      "event_details": "Be here",
+      "event_date": "2019-05-16"
     }
   ],
   "friends": [

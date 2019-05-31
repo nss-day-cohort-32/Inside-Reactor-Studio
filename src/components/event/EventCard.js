@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 import './EventList.css';
 class EventCard extends Component {
   state = {
@@ -24,10 +25,16 @@ class EventCard extends Component {
         <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
           Delete
         </button>
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => {
+            this.props.history.push(`/events/${this.props.event.id}/edit`)
+          }}>Edit</button>
         <br/><br/>
       </div>
     );
   }
 }
 
-export default EventCard;
+export default withRouter (EventCard);
