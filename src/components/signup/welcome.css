@@ -1,0 +1,11 @@
+div .jumbo {
+    background-color: white;
+}
+
+.jumbo {
+    background-color: white;
+    background-image: url("https://media.istockphoto.com/vectors/arcon-nut-icon-vector-id611755246?k=6&m=611755246&s=612x612&w=0&h=Aj8_dpdtWOcMkYpoCKiK6fPCDPqEOpIbTrHAOl3xpuI=");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 450px;
+}
