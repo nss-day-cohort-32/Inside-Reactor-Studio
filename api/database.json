@@ -120,13 +120,6 @@
   ],
   "messages": [
     {
-      "message_content": "I <3 direwolves and bein' honest",
-      "userId": "1",
-      "userName": "Ned Stark",
-      "date": "2014-05-13T20:06:50.620Z",
-      "id": 1
-    },
-    {
       "message_content": "I also <3 Direwolves and Honesty",
       "userId": "3",
       "userName": "Jon Snow",
@@ -321,6 +314,12 @@
       "event_details": "Blood for the Blood God",
       "event_date": "2019-06-01",
       "id": 12
+    },
+    {
+      "event_name": "test",
+      "event_details": "test",
+      "event_date": "1981-04-04",
+      "id": 13
     }
   ],
   "friends": [
