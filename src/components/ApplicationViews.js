@@ -2,19 +2,15 @@ import { Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
 import Header from '../components/layout/Header';
-
+import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
 
 import TaskList from './task/TaskList';
-<<<<<<< HEAD
-import TaskForm from './task/TaskForm';
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
 import NewsEditForm from "./news/NewsEditForm"
 
-=======
->>>>>>> master
 class ApplicationViews extends Component {
   state = {
     login: [],
