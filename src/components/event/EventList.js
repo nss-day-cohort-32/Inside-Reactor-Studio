@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './EventList.css';
 import { Link } from 'react-router-dom';
+import EventHeader from '../layout/EventHeader'
 import EventCard from './EventCard';
 import EventManager from '../../modules/EventManager';
 
@@ -31,7 +32,7 @@ export default class EventList extends Component {
   render() {
     return (
       <div className="events">
-        <h2>Events</h2>
+        <EventHeader/>
         <div className="eventButton">
           <button>
             <Link to="/events/new">Add Event</Link>
