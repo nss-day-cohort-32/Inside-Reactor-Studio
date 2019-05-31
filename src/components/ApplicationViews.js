@@ -1,13 +1,15 @@
 import { Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
-import Header from '../components/layout/Header';
-
+// import Header from '../components/layout/Header';
 import EventList from './event/EventList';
 import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
-
 import TaskList from './task/TaskList';
+import Welcome from "./signup/Welcome";
+import SignupForm from "./signup/signup";
+import Login from "./signup/login";
+
 class ApplicationViews extends Component {
   state = {
     signup: [],
@@ -54,9 +56,20 @@ class ApplicationViews extends Component {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" render={props => {
+          return (
+            <SignupForm {...props}
+              users={this.state.users}
+              addUser={this.addUser}
+            />
+          );
+        }}
+        />
         <div className="container">
           {/* HEADER */}
-          <Header />
+          {/* <Header /> */}
           {/* TASKS */}
           <Route
             exact
