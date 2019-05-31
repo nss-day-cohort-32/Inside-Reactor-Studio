@@ -1,19 +1,21 @@
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
-import Header from '../components/layout/Header';
+// import Header from '../layout/Header';
 import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
-
 import TaskList from './task/TaskList';
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
 import NewsEditForm from "./news/NewsEditForm"
+import Welcome from "./signup/Welcome";
+import SignupForm from "./signup/signup";
+import Login from "./signup/login";
 
 class ApplicationViews extends Component {
   state = {
-    login: [],
+    signup: [],
     news: [],
     messages: [],
     friends: []
@@ -51,13 +53,26 @@ class ApplicationViews extends Component {
       });
   };
 
+  isAuthenticated = () => sessionStorage.getItem('credentials') !== null;
+
   render() {
     console.log('ApplicationViews render');
     return (
       <React.Fragment>
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" render={props => {
+          return (
+            <SignupForm {...props}
+              users={this.state.users}
+              addUser={this.addUser}
+            />
+          );
+        }}
+        />
         <div className="container">
           {/* HEADER */}
-          <Header />
+          {/* <Header /> */}
           {/* TASKS */}
           <Route
             exact
