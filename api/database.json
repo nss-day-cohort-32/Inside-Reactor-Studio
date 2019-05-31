@@ -111,6 +111,11 @@
       "user_name": "hcleland",
       "password": "password",
       "id": 25
+    },
+    {
+      "user_name": "doot",
+      "password": "dat",
+      "id": 26
     }
   ],
   "messages": [
