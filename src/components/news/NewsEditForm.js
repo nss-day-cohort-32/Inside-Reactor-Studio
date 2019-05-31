@@ -7,28 +7,31 @@ export default class NewsEditForm extends Component {
         article_blurb: '',
         article_link: '',
         article_published: '',
-        title: '',
-        blurb: '',
-        link: '',
-        published: ''
+        
     };
 
     handleFieldChange = evt => {
         const stateToChange = {}
-        stateToChange[evt.target.id] = evt.target.placeholder 
-        this.setState(stateToChange)
+        stateToChange[evt.target.id] = evt.target.value 
+        this.setState(stateToChange);
+        console.log(stateToChange)
+    }
+
+    updateArticle = article => {
+        NewsManager.put(article)
     }
 
     updateExistingArticle = evt => {
         evt.preventDefault()
 
         const editedArticle = {
-            id: this.props.match.params.id,
-            article_title: this.state.article_title,
-            article_blurb: this.state.article_blurb,
-            article_link: this.state.article_link,
-            article_published: this.state.article_published
+            id: this.props.match.params.articleId,
+            title: this.state.article_title,
+            blurb: this.state.article_blurb,
+            link: this.state.article_link,
+            published: this.state.article_published
         };
+        console.log("edited article", editedArticle)
         this.props.updateArticle(editedArticle)
         .then(() => this.props.history.push('/animals'))
     }
@@ -37,10 +40,10 @@ export default class NewsEditForm extends Component {
         NewsManager.get(this.props.match.params.id)
         .then(article => {
             this.setState({
-                article_title: article.article_title,
-                article_blurb: this.state.article_blurb,
-                article_link: this.state.article_link,
-                article_published: this.state.article_published
+                title: article.title,
+                blurb: article.blurb,
+                link: article.link,
+                published: article.published
 
             });
         });
@@ -57,7 +60,7 @@ export default class NewsEditForm extends Component {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="article_title"
-                            placeholder={this.state.article_title}
+                            placeholder={this.state.title}
                             />
                     </div>
                     <div className="form-group">
@@ -67,7 +70,7 @@ export default class NewsEditForm extends Component {
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="name"
-                        placeholder = {this.state.article_blurb}
+                        placeholder={this.state.blurb}
                         />
                     </div>
                     <div className="form-group">
@@ -77,7 +80,7 @@ export default class NewsEditForm extends Component {
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="name"
-                        placeholder = {this.state.article_link}
+                        placeholder = {this.state.link}
                         />
                     </div>
                     <div className="form-group">
@@ -87,7 +90,7 @@ export default class NewsEditForm extends Component {
                         className="form-control"
                         onChange={this.handleFieldChange}
                         id="name"
-                        placeholder = {this.state.article_published}
+                        placeholder = {this.state.published}
                         />
                     </div>
                     <button
