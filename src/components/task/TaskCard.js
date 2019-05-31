@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types';
 // import TaskList from './TaskList';
 import './Tasks.css'
@@ -56,4 +57,5 @@ const btnStyle = {
   float: 'right'
 };
 
-export default TaskCard;
+export default withRouter (TaskCard)
+ 
