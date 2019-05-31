@@ -199,18 +199,6 @@
   ],
   "tasks": [
     {
-      "task_title": "Josh Task",
-      "task_doneBy": "2019-05-31",
-      "task_completed": false,
-      "id": 1
-    },
-    {
-      "task_title": "Joey Task",
-      "task_doneBy": "2019-05-09",
-      "task_completed": false,
-      "id": 2
-    },
-    {
       "task_title": "Ken Task",
       "task_doneBy": "2019-05-13",
       "task_completed": false,
@@ -221,12 +209,6 @@
       "task_doneBy": "2019-05-02",
       "task_completed": false,
       "id": 4
-    },
-    {
-      "task_title": "Josh 2nd Task",
-      "task_doneBy": "2019-05-04",
-      "task_completed": false,
-      "id": 5
     }
   ],
   "events": [
