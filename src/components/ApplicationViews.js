@@ -8,7 +8,6 @@ import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
 
 import TaskList from './task/TaskList';
-
 class ApplicationViews extends Component {
   state = {
     login: [],
@@ -96,5 +95,5 @@ class ApplicationViews extends Component {
     );
   }
 }
-
 export default withRouter(ApplicationViews);
+
