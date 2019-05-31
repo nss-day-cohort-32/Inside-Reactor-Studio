@@ -5,9 +5,9 @@ export default {
     return fetch(`${remoteURL}/messages/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/events?_sort=message_date&_order=desc`).then(e => e.json())
+    return fetch(`${remoteURL}/messages?_sort=message_date&_order=desc`).then(e => e.json())
   },
-  deleteEvent(id) {
+  deleteMessage(id) {
     return fetch(`${remoteURL}/messages/${id}`, {
       method: "DELETE",
       headers: {
@@ -16,7 +16,7 @@ export default {
     }).then(e => e.json())
   },
   post(message) {
-    return fetch(`${remoteURL}/message`, {
+    return fetch(`${remoteURL}/messages`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default {
     }).then(e => e.json())
   },
   put(editedMessage) {
-    return fetch(`${remoteURL}/events/${editedMessage.id}`, {
+    return fetch(`${remoteURL}/messages/${editedMessage.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

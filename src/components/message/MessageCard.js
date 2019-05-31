@@ -29,3 +29,5 @@ class MessageCard extends Component {
   }
 }
 
+export default MessageCard;
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MessageManager from '../../modules/MessageManager';
+import MessagesManager from '../../modules/MessagesManager';
 import './MessageList.css';
 
 export default class MessageForm extends Component {
@@ -11,8 +11,8 @@ export default class MessageForm extends Component {
   };
 
   addMessage = message =>
-    MessageManager.post(message)
-      .then(() => MessageManager.getAll('messages'))
+    MessagesManager.post(message)
+      .then(() => MessagesManager.getAll('messages'))
       .then(messages =>
         this.setState({
           messages: messages
