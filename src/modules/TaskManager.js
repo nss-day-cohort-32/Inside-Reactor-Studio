@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/tasks/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/tasks`).then(e => e.json())
+    return fetch(`${remoteURL}/tasks?_sort=task_doneBy&_order=desc`).then(e => e.json())
   },
   deleteTask(id) {
     return fetch(`${remoteURL}/tasks/${id}`, {
@@ -15,13 +15,13 @@ export default {
       },
     }).then(e => e.json())
   },
-  post(event) {
+  post(task) {
     return fetch(`${remoteURL}/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(event)
+      body: JSON.stringify(task)
     }).then(e => e.json())
   },
   put(editedTask) {
@@ -32,5 +32,15 @@ export default {
       },
       body: JSON.stringify(editedTask)
     }).then(data => data.json());
-  }
+  },
+  patch(editedTask) {
+    return fetch(`${remoteURL}/tasks/${editedTask.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedTask)
+    }).then(data => data.json());
+  },
+
 }
