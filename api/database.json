@@ -167,18 +167,17 @@
   "articles": [
     {
       "id": 7,
-      "article_title": "article7",
+      "article_title": "Article Seven",
       "article_blurb": "BLURRRD",
       "article_link": "LURNK",
       "article_published": "2019-05-18"
     },
     {
-      "article_title": "Article Name",
-      "article_blurb": "sdfsdgweg",
-      "article_link": "LNK",
-      "article_published": "2019-08-12",
-      "userId": "1",
-      "id": 9
+      "id": 9,
+      "article_title": "Article9",
+      "article_blurb": "I think I've got it.",
+      "article_link": "Link Goes HEre",
+      "article_published": "2019-04-11"
     },
     {
       "article_title": "Top 10 Things to Do in the North",
@@ -239,6 +238,13 @@
       "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
       "article_published": "2019-05-31",
       "id": 17
+    },
+    {
+      "article_title": "Save",
+      "article_blurb": "Save",
+      "article_link": "save",
+      "article_published": "2019-06-01",
+      "id": 18
     }
   ],
   "tasks": [

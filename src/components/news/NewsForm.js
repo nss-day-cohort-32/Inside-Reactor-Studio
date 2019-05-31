@@ -37,7 +37,7 @@ export default class NewsForm extends Component {
             article_published: this.state.article_published
         };
 
-        this.addArticle(article).then(() => this.props.history.push('./articles'));
+        this.addArticle(article).then(() => this.props.history.push('/articles'));
     };
 
     render() {

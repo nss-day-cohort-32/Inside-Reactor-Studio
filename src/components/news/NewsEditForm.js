@@ -23,7 +23,7 @@ export default class NewsEditForm extends Component {
         evt.preventDefault()
 
         const editedArticle = {
-                id: this.props.match.params.articleId,
+            id: this.props.match.params.articleId,
             article_title: this.state.article_title,
             article_blurb: this.state.article_blurb,
             article_link: this.state.article_link,
