@@ -32,7 +32,7 @@ export default class NewsList extends Component {
         return (
             <div className="news">
                 <h2>Newsss</h2>
-                <div class="newsButton">
+                <div className="newsButton">
                     <button>
                         <Link to="/articles/new">Add Article</Link>
                     </button>

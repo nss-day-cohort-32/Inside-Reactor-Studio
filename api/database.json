@@ -166,11 +166,11 @@
   ],
   "articles": [
     {
-      "article_title": "TEST TITLE",
+      "id": 7,
+      "article_title": "article7",
       "article_blurb": "BLURRRD",
       "article_link": "LURNK",
-      "article_published": "2019-05-18",
-      "id": 7
+      "article_published": "2019-05-18"
     },
     {
       "article_title": "Article Name",
