@@ -5,7 +5,6 @@ class EventCard extends Component {
     saveDisabled: false
   };
 
-
   handleClick = e => {
     console.log('click', e, this.props.event.id);
     this.setState({
@@ -17,13 +16,15 @@ class EventCard extends Component {
   render() {
     return (
       <div className="event-card">
-        <h4>{this.props.event.event_name}</h4>
-        <h6>{this.props.event.event_details}</h6>
+        <h2>{this.props.event.event_name}</h2>
         <h6>{this.props.event.event_date}</h6>
+        <h5>
+        <br/>{this.props.event.event_details}</h5>
+        <br/>
         <button onClick={this.handleClick} disabled={this.state.saveDisabled}>
           Delete
         </button>
-        <hr />
+        <br/><br/>
       </div>
     );
   }

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import TaskList from './TaskList';
+import './Tasks.css'
 export class TaskCard extends Component {
   getStyle = () => {
     return {
-      background: '#f3f3f3',
+      background: '#ccc',
       padding: '10px',
       borderBottom: '1px #ccc dotted',
       textDecoration: this.props.task.task_completed ? 'line-through' : 'none',
-      color: this.props.task.task_completed ? 'red' : 'black',
+      color: this.props.task.task_completed ? 'rgb(46, 139, 250)' : 'black',
     };
   };
 
@@ -29,6 +30,12 @@ export class TaskCard extends Component {
           <button onClick={this.props.delTask.bind(this, id)} style={btnStyle}>
             X
           </button>
+          <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => {
+            this.props.history.push(`/tasks/${this.props.task.id}/edit`)
+          }}>Edit</button>
         </div>
       </div>
     );
@@ -40,7 +47,7 @@ TaskCard.propTypes = {
 };
 
 const btnStyle = {
-  background: '#ff0000',
+  background: 'rgb(46, 139, 250)',
   color: 'white',
   border: 'none',
   padding: '5px 9px',

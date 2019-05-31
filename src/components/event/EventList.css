@@ -1,24 +1,42 @@
-.events {
+/* .events {
   display: flex;
   justify-content: space-evenly;
 }
 
 .card {
   width: 10rem;
-}
+} */
 
-.card-title {
+/* .card-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-}
-
+} */
+/* 
 .card-link {
   margin: 12px 0 0 0;
   font-size: 0.7em;
+} */
+
+.event-card {
+  text-align: center;
+  background: rgb(51, 143, 255);
+  color: #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .event-card:first-child {
-  background-color: green;
+  background-color: #ccc;
+  color: #333;
+  font-style: italic;
+  font-weight: bolder;
+  border: 1px solid #333;
+}
+
+.eventButton,
+.events-title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

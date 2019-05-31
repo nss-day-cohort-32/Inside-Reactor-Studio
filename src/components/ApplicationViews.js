@@ -6,9 +6,10 @@ import EventList from './event/EventList';
 import EventManager from '../modules/EventManager';
 import EventForm from './event/EventForm';
 import TaskList from './task/TaskList';
-import Welcome from "./signup/Welcome";
-import SignupForm from "./signup/signup";
-import Login from "./signup/login";
+import TaskEditForm from './task/TaskEditForm';
+import Welcome from './signup/Welcome';
+import SignupForm from './signup/signup';
+import Login from './signup/login';
 
 class ApplicationViews extends Component {
   state = {
@@ -58,14 +59,18 @@ class ApplicationViews extends Component {
       <React.Fragment>
         <Route exact path="/" component={Welcome} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" render={props => {
-          return (
-            <SignupForm {...props}
-              users={this.state.users}
-              addUser={this.addUser}
-            />
-          );
-        }}
+        <Route
+          exact
+          path="/signup"
+          render={props => {
+            return (
+              <SignupForm
+                {...props}
+                users={this.state.users}
+                addUser={this.addUser}
+              />
+            );
+          }}
         />
         <div className="container">
           {/* HEADER */}
@@ -105,10 +110,21 @@ class ApplicationViews extends Component {
               );
             }}
           />
+          <Route
+            path="/tasks/:taskId(\d+)/edit"
+            render={props => {
+              return (
+                <TaskEditForm
+                  {...props}
+                  updateTask={this.updateTask}
+                  tasks={this.state.tasks}
+                />
+              );
+            }}
+          />
         </div>
       </React.Fragment>
     );
   }
 }
 export default withRouter(ApplicationViews);
-
