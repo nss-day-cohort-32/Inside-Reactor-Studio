@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/messages/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/messages?_sort=message_date&_order=desc`).then(e => e.json())
+    return fetch(`${remoteURL}/messages?_sort=date&_order=desc`).then(e => e.json())
   },
   deleteMessage(id) {
     return fetch(`${remoteURL}/messages/${id}`, {

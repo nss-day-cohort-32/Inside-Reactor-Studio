@@ -141,7 +141,7 @@ class ApplicationViews extends Component {
               );
             }}
           />
-                    <Route
+          <Route
             exact
             path="/messages"
             render={props => {
