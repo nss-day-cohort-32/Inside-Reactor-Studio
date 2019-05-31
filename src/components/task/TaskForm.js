@@ -19,56 +19,45 @@ export default class EventForm extends Component {
   saveNewTask = evt => {
     evt.preventDefault();
 
-    const event = {
+    const task = {
       task_title: this.state.task_title,
       task_doneBy: this.state.task_doneBy,
-      // Make sure the event_date is saved to the database as a number since it is a foreign key.
       task_completed: this.state.task_completed
     };
-
-    this.props.addTask(event).then(() => this.props.history.push('/tasks'));
+    console.log(task)
+    this.props.addTask(task).then(() => this.props.history.push('/tasks'));
   };
 
   render() {
+    console.log("form render")
     return (
       <React.Fragment>
-        <form className="eventForm">
+        <form className="taskForm">
           <div className="form-group">
-            <label htmlFor="event_name">Event Name</label>
+            <label htmlFor="task_name">Task Name</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
-              id="event_name"
-              placeholder="Event Name"
+              id="task_title"
+              placeholder="Task Name"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="event_details">Event Details</label>
-            <input
-              type="text"
-              required
-              className="form-control"
-              onChange={this.handleFieldChange}
-              id="event_details"
-              placeholder="event_details"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="events">Event Date</label>
+            <label htmlFor="tasks">Task Due Date</label>
             <input
               type="date"
               required
               className="form-control"
-              name="event_date"
-              id="event_date"
+              name="task_doneBy"
+              id="task_doneBy"
               onChange={this.handleFieldChange}
             />
           </div>
           <button
             className="button"
-            onClick={this.saveNewEvent}
+            onClick={this.saveNewTask}
             className="btn btn-primary"
           >
             Submit

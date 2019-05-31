@@ -199,80 +199,81 @@
   ],
   "tasks": [
     {
-      "id": 1,
+      "task_title": "Josh Task",
+      "task_doneBy": "2019-05-31",
+      "task_completed": false,
+      "id": 1
+    },
+    {
+      "task_title": "Joey Task",
+      "task_doneBy": "2019-05-09",
+      "task_completed": false,
+      "id": 2
+    },
+    {
+      "task_title": "Ken Task",
+      "task_doneBy": "2019-05-13",
+      "task_completed": false,
+      "id": 3
+    },
+    {
+      "task_title": "Heather Task",
+      "task_doneBy": "2019-05-02",
+      "task_completed": false,
+      "id": 4
+    },
+    {
+      "task_title": "Josh 2nd Task",
+      "task_doneBy": "2019-05-04",
+      "task_completed": false,
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "id": 6,
       "userId": 1,
-      "task_title": "Shovel snow",
-      "task_doneBy": "2030-07-14",
-      "task_completed": false
+      "event_name": "This is an event name",
+      "event_details": "This is an even detail",
+      "event_date": "2010-07-14"
     },
     {
-      "task_title": "TRY2SAVE",
-      "task_doneBy": "2019-05-08",
-      "id": 6
-    },
-    {
-      "task_title": "TEST2",
-      "task_doneBy": "2019-05-15",
+      "event_name": "test event",
+      "event_details": "test",
+      "event_date": "2019-05-09",
       "id": 7
     },
     {
-      "task_title": "Give fatherly advice",
-      "task_doneBy": "2019-05-16",
-      "task_completed": false,
-      "userId": "1",
+      "event_name": "WWE Showdown",
+      "event_details": "This is gonna be super ",
+      "event_date": "2019-05-25",
       "id": 8
     },
     {
-      "task_title": "PLEASE BE TRUE",
-      "task_doneBy": "2019-05-10",
-      "task_completed": false,
-      "userId": "1",
+      "event_name": "WWE Showdown 2 ",
+      "event_details": "Even more super than the first ",
+      "event_date": "2019-05-15",
+      "id": 9
+    },
+    {
+      "event_name": "test",
+      "event_details": "test",
+      "event_date": "2019-06-29",
       "id": 10
     },
     {
-      "task_title": "Do a thing",
-      "task_doneBy": "2019-05-15",
-      "task_completed": false,
-      "userId": "1",
+      "event_name": "test",
+      "event_details": "test",
+      "event_date": "2018-01-30",
+      "id": 11
+    },
+    {
+      "event_name": "test",
+      "event_details": "test",
+      "event_date": "2019-06-18",
       "id": 12
-    },
-    {
-      "task_title": "Do another thing",
-      "task_doneBy": "2019-05-09",
-      "task_completed": false,
-      "userId": "1",
-      "id": 13
-    },
-    {
-      "task_title": "who let the dog out",
-      "task_doneBy": "2019-05-14",
-      "task_completed": false,
-      "userId": "1",
-      "id": 14
-    },
-    {
-      "task_title": "More snow shoveling",
-      "task_doneBy": "2019-05-17",
-      "task_completed": false,
-      "userId": "1",
-      "id": 15
-    },
-    {
-      "task_title": "Wash fur coat",
-      "task_doneBy": "2019-05-15",
-      "task_completed": false,
-      "userId": "9",
-      "id": 16
-    },
-    {
-      "task_title": "dfgasjkdgflask",
-      "task_doneBy": "2019-05-13",
-      "task_completed": false,
-      "userId": "2",
-      "id": 17
     }
   ],
-  "events": [],
   "friends": [
     {
       "id": 1,
