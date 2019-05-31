@@ -6,11 +6,14 @@ import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
 import EventEditForm from './event/EventEditForm'
+
 import TaskList from './task/TaskList';
 import TaskEditForm from './task/TaskEditForm'
+
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
 import NewsEditForm from "./news/NewsEditForm"
+
 import Welcome from "./signup/Welcome";
 import SignupForm from "./signup/signup";
 import Login from "./signup/login";

@@ -31,7 +31,7 @@ export class TaskCard extends Component {
           <button onClick={this.props.delTask.bind(this, id)} style={btnStyle}>
             X
           </button>
-          <button
+          <button style={editBtnStyle}
           type="button"
           className="btn btn-success"
           onClick={() => {
@@ -56,6 +56,16 @@ const btnStyle = {
   cursor: 'pointer',
   float: 'right'
 };
+
+const editBtnStyle = {
+  background: 'rgb(46, 139, 250)',
+  color: 'white',
+  border: 'none',
+  padding: '5px 9px',
+  marginRight: '5px',
+  cursor: 'pointer',
+  float: 'right'
+}
 
 export default withRouter (TaskCard)
  
