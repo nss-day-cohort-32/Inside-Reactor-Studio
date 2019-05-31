@@ -166,65 +166,18 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "userId": 1,
-      "article_title": "This is an article title",
-      "article_blurb": "This is an article blurd",
-      "article_link": "https://news.link.com",
-      "article_published": "2017-07-14"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "article_title": "This is an article title",
-      "article_blurb": "This is an article blurd",
-      "article_link": "https://news.link.com",
-      "article_published": "2011-07-15"
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "article_title": "This is an article title",
-      "article_blurb": "This is an article blurd",
-      "article_link": "https://news.link.com",
-      "article_published": "2011-02-14"
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "article_title": "This is an article title",
-      "article_blurb": "This is an article blurd",
-      "article_link": "https://news.link.com",
-      "article_published": "2011-07-17"
-    },
-    {
-      "article_title": "Test 1",
-      "article_blurb": "Test 2",
-      "article_link": "Test 3",
-      "article_published": "2019-05-08",
-      "id": 5
-    },
-    {
-      "article_title": "CRAZY NEWS HEADLINE",
-      "article_blurb": "blubvuweb",
-      "article_link": "link.com",
-      "article_published": "2019-05-02",
-      "id": 6
-    },
-    {
-      "article_title": "TEST TITLE",
+      "id": 7,
+      "article_title": "Article Seven",
       "article_blurb": "BLURRRD",
       "article_link": "LURNK",
-      "article_published": "2019-05-18",
-      "id": 7
+      "article_published": "2019-05-18"
     },
     {
-      "article_title": "Article Name",
-      "article_blurb": "sdfsdgweg",
-      "article_link": "LNK",
-      "article_published": "2019-08-12",
-      "userId": "1",
-      "id": 9
+      "id": 9,
+      "article_title": "Article9",
+      "article_blurb": "I think I've got it.",
+      "article_link": "Link Goes HEre",
+      "article_published": "2019-04-11"
     },
     {
       "article_title": "Top 10 Things to Do in the North",
@@ -257,6 +210,41 @@
       "article_published": "2019-05-20",
       "userId": "2",
       "id": 13
+    },
+    {
+      "article_name": "",
+      "article_blurb": "Yaaay",
+      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
+      "article_published": "2019-05-31",
+      "id": 14
+    },
+    {
+      "article_title": "",
+      "article_blurb": "Yaaay",
+      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
+      "article_published": "2019-05-10",
+      "id": 15
+    },
+    {
+      "article_title": "Test",
+      "article_blurb": "Test Blurb",
+      "article_link": "www.youtube.com",
+      "article_published": "2019-05-01",
+      "id": 16
+    },
+    {
+      "article_title": "Godzilla Hero or Menace?",
+      "article_blurb": "Godzilla, big dick G.",
+      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
+      "article_published": "2019-05-31",
+      "id": 17
+    },
+    {
+      "article_title": "Save",
+      "article_blurb": "Save",
+      "article_link": "save",
+      "article_published": "2019-06-01",
+      "id": 18
     }
   ],
   "tasks": [
