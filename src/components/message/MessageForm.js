@@ -55,28 +55,28 @@ export default class MessageForm extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="event_details">Event Details</label>
+            <label htmlFor="message_details">Message Details</label>
             <input
               type="text"
               required
               className="form-control"
               onChange={this.handleFieldChange}
-              id="event_details"
-              placeholder="event_details"
+              id="message_details"
+              placeholder="message_details"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="events">Event Date</label>
+            <label htmlFor="messages">Messages</label>
             <input
               type="date"
               required
               className="form-control"
-              name="event_date"
-              id="event_date"
+              name="message_date"
+              id="message_date"
               onChange={this.handleFieldChange}
             />
           </div>
-          <button className="button" onClick={this.saveNewEvent}>
+          <button className="button" onClick={this.saveNewMessage}>
             Submit
           </button>
         </form>
