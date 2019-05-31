@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/events/${id}`).then(e => e.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/events`).then(e => e.json())
+    return fetch(`${remoteURL}/events?_sort=event_date&_order=desc`).then(e => e.json())
   },
   deleteEvent(id) {
     return fetch(`${remoteURL}/events/${id}`, {
