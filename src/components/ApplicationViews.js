@@ -8,6 +8,7 @@ import TaskList from './task/TaskList';
 import TaskForm from './task/TaskForm';
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
+import NewsEditForm from "./news/NewsEditForm"
 
 class ApplicationViews extends Component {
   state = {
@@ -120,6 +121,11 @@ class ApplicationViews extends Component {
           );
         }}
         />
+        <Route
+  exact path="/articles/:articleId(\d+)/edit" render={props => {
+    return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle}/>
+  }}
+/>
       </React.Fragment>
     );
   }

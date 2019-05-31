@@ -23,6 +23,16 @@ export default class NewsCard extends Component {
                  disabled={this.state.saveDisabled}
             >Delete</button>
             <hr />
+            <button 
+                type="button"
+                className="btn btn-success"
+                onClick={() => {
+                    this.props.history.push(`/articles/${this.props.article.id}/edit`)
+                }}
+                >
+                    Edit Article
+                </button>
+            <hr />
         </article>
         );
     }
