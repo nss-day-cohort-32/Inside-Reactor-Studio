@@ -66,11 +66,7 @@ export default class EventForm extends Component {
               onChange={this.handleFieldChange}
             />
           </div>
-          <button
-            className="button"
-            onClick={this.saveNewEvent}
-            className="btn btn-primary"
-          >
+          <button className="button" onClick={this.saveNewEvent}>
             Submit
           </button>
         </form>

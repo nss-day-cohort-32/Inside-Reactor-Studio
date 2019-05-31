@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import './EventList.css';
 class EventCard extends Component {
   state = {
     saveDisabled: false
   };
+
 
   handleClick = e => {
     console.log('click', e, this.props.event.id);
@@ -14,7 +16,7 @@ class EventCard extends Component {
 
   render() {
     return (
-      <article className="event-card">
+      <div className="event-card">
         <h4>{this.props.event.event_name}</h4>
         <h6>{this.props.event.event_details}</h6>
         <h6>{this.props.event.event_date}</h6>
@@ -22,7 +24,7 @@ class EventCard extends Component {
           Delete
         </button>
         <hr />
-      </article>
+      </div>
     );
   }
 }

@@ -8,7 +8,6 @@ export default class EventList extends Component {
     events: []
   };
   componentDidMount() {
-    const newState = {};
 
     EventManager.getAll().then(allEvents => {
       this.setState({
