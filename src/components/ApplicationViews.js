@@ -5,7 +5,9 @@ import React, { Component } from 'react';
 import EventManager from '../modules/EventManager'
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
+import EventEditForm from './event/EventEditForm'
 import TaskList from './task/TaskList';
+import TaskEditForm from './task/TaskEditForm'
 import NewsList from './news/NewsList'
 import NewsForm from "./news/NewsForm"
 import NewsEditForm from "./news/NewsEditForm"
@@ -97,14 +99,18 @@ class ApplicationViews extends Component {
       <React.Fragment>
         <Route exact path="/" component={Welcome} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" render={props => {
-          return (
-            <SignupForm {...props}
-              users={this.state.users}
-              addUser={this.addUser}
-            />
-          );
-        }}
+        <Route
+          exact
+          path="/signup"
+          render={props => {
+            return (
+              <SignupForm
+                {...props}
+                users={this.state.users}
+                addUser={this.addUser}
+              />
+            );
+          }}
         />
         <div className="container">
           {/* HEADER */}
@@ -150,15 +156,52 @@ class ApplicationViews extends Component {
             render={props => {
               return (
                 <MessageList
-                  messages={this.state.messages}
+                  Messages={this.state.messages}
                   {...props}
                   deleteMessage={this.deleteMessage}
                 />
               );
             }}
           />
+          <Route
+            exact
+            path="/messages/new"
+            render={props => {
+              return (
+                <MessageForm
+                  {...props}
+                  events={this.state.messages}
+                  addMessage={this.addMessage}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/tasks/:taskId(\d+)/edit"
+            render={props => {
+              return (
+                <TaskEditForm
+                  {...props}
+                  updateTask={this.updateTask}
+                  tasks={this.state.tasks}
+                />
+              );
+            }}
+          />
         </div>
-        <Route 
+        <Route
+            path="/events/:eventId(\d+)/edit"
+            render={props => {
+              return (
+                <EventEditForm
+                  {...props}
+                  updateTask={this.updateTask}
+                  tasks={this.state.tasks}
+                />
+              );
+            }}
+          />
+        <Route
         exact
         path="/articles"
         render={props => {
@@ -194,4 +237,3 @@ class ApplicationViews extends Component {
   }
 }
 export default withRouter(ApplicationViews);
-
