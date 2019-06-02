@@ -22,7 +22,6 @@ export default class NewsCard extends Component {
                 } 
                  disabled={this.state.saveDisabled}
             >Delete</button>
-            <hr />
             <button 
                 type="button"
                 className="btn btn-success"
@@ -32,7 +31,6 @@ export default class NewsCard extends Component {
                 >
                     Edit Article
                 </button>
-            <hr />
         </article>
         );
     }

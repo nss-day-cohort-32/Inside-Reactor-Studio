@@ -131,6 +131,11 @@
       "user_name": "driscoll.recording@gmail.com",
       "password": "password",
       "id": 29
+    },
+    {
+      "user_name": "driscoll.recording@gmail.com",
+      "password": "password",
+      "id": 30
     }
   ],
   "messages": [
@@ -214,57 +219,6 @@
       "article_published": "2019-05-1",
       "userId": "1",
       "id": 11
-    },
-    {
-      "article_title": "LOL",
-      "article_blurb": "LOL",
-      "article_link": "LOL",
-      "article_published": "2019-05-08",
-      "userId": "2",
-      "id": 12
-    },
-    {
-      "article_title": "hrteh",
-      "article_blurb": "eht",
-      "article_link": "ehey",
-      "article_published": "2019-05-20",
-      "userId": "2",
-      "id": 13
-    },
-    {
-      "article_name": "",
-      "article_blurb": "Yaaay",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-31",
-      "id": 14
-    },
-    {
-      "article_title": "",
-      "article_blurb": "Yaaay",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-10",
-      "id": 15
-    },
-    {
-      "article_title": "Test",
-      "article_blurb": "Test Blurb",
-      "article_link": "www.youtube.com",
-      "article_published": "2019-05-01",
-      "id": 16
-    },
-    {
-      "article_title": "Godzilla Hero or Menace?",
-      "article_blurb": "Godzilla, big dick G.",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-31",
-      "id": 17
-    },
-    {
-      "article_title": "Save",
-      "article_blurb": "Save",
-      "article_link": "save",
-      "article_published": "2019-06-01",
-      "id": 18
     }
   ],
   "tasks": [
@@ -273,12 +227,6 @@
       "task_title": "Josh Task",
       "task_doneBy": "2019-05-15",
       "task_completed": false
-    },
-    {
-      "task_title": "Joey Task",
-      "task_doneBy": "2019-05-09",
-      "task_completed": false,
-      "id": 2
     },
     {
       "task_title": "Ken Task",
@@ -291,6 +239,18 @@
       "task_title": "Testing",
       "task_doneBy": "2019-05-16",
       "task_completed": false
+    },
+    {
+      "task_title": "hey",
+      "task_doneBy": "",
+      "task_completed": false,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "task_title": "yo",
+      "task_doneBy": "",
+      "task_completed": false
     }
   ],
   "events": [
@@ -301,10 +261,10 @@
       "event_date": "2019-05-03"
     },
     {
-      "id": 18,
-      "event_name": "Showdown",
-      "event_details": "Be here",
-      "event_date": "2019-05-16"
+      "id": 19,
+      "event_name": "Pool Party at the Zoo",
+      "event_details": "it is what it is ",
+      "event_date": "2019-05-15"
     }
   ],
   "friends": [

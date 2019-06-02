@@ -2,21 +2,21 @@ import { Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import React, { Component } from 'react';
 // import Header from '../layout/Header';
-import EventManager from '../modules/EventManager'
+import EventManager from '../modules/EventManager';
 import EventList from './event/EventList';
 import EventForm from './event/EventForm';
-import EventEditForm from './event/EventEditForm'
+import EventEditForm from './event/EventEditForm';
 
 import TaskList from './task/TaskList';
-import TaskEditForm from './task/TaskEditForm'
+import TaskEditForm from './task/TaskEditForm';
 
-import NewsList from './news/NewsList'
-import NewsForm from "./news/NewsForm"
-import NewsEditForm from "./news/NewsEditForm"
+import NewsList from './news/NewsList';
+import NewsForm from './news/NewsForm';
+import NewsEditForm from './news/NewsEditForm';
 
-import Welcome from "./signup/Welcome";
-import SignupForm from "./signup/signup";
-import Login from "./signup/login";
+import Welcome from './signup/Welcome';
+import SignupForm from './signup/signup';
+import Login from './signup/login';
 
 class ApplicationViews extends Component {
   state = {
@@ -80,43 +80,57 @@ class ApplicationViews extends Component {
           }}
         />
         <div className="container">
-          {/* HEADER */}
-          {/* <Header /> */}
           {/* TASKS */}
-          <Route
-            exact
-            path="/tasks"
-            render={props => {
-              return <TaskList />;
-            }}
-          />
+          <div className="scrollable">
+            <Route
+              exact
+              path="/tasks"
+              render={props => {
+                return <TaskList />;
+              }}
+            />
+          </div>
           {/* EVENTS */}
-          <Route
-            exact
-            path="/events"
-            render={props => {
-              return (
-                <EventList
-                  events={this.state.events}
-                  {...props}
-                  deleteEvent={this.deleteEvent}
-                />
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/events/new"
-            render={props => {
-              return (
-                <EventForm
-                  {...props}
-                  events={this.state.events}
-                  addEvent={this.addEvent}
-                />
-              );
-            }}
-          />
+          <div className="container">
+            <Route
+              exact
+              path="/events"
+              render={props => {
+                return (
+                  <EventList
+                    events={this.state.events}
+                    {...props}
+                    deleteEvent={this.deleteEvent}
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/events/new"
+              render={props => {
+                return (
+                  <EventForm
+                    {...props}
+                    events={this.state.events}
+                    addEvent={this.addEvent}
+                  />
+                );
+              }}
+            />
+            <Route
+              path="/events/:eventId(\d+)/edit"
+              render={props => {
+                return (
+                  <EventEditForm
+                    {...props}
+                    updateTask={this.updateTask}
+                    tasks={this.state.tasks}
+                  />
+                );
+              }}
+            />
+          </div>
           <Route
             path="/tasks/:taskId(\d+)/edit"
             render={props => {
@@ -129,50 +143,46 @@ class ApplicationViews extends Component {
               );
             }}
           />
-        </div>
-        <Route
-            path="/events/:eventId(\d+)/edit"
+          <Route
+            exact
+            path="/articles"
             render={props => {
               return (
-                <EventEditForm
+                <NewsList
+                  news={this.state.news}
                   {...props}
-                  updateTask={this.updateTask}
-                  tasks={this.state.tasks}
+                  deleteArticle={this.deleteArticle}
                 />
               );
             }}
           />
-        <Route 
-        exact
-        path="/articles"
-        render={props => {
-          return(
-            <NewsList
-            news={this.state.news}
-            {...props}
-            deleteArticle={this.deleteArticle}
-            />
-          );
-        }}
-        />
-        <Route
-        exact
-        path="/articles/new"
-        render={props => {
-          return(
-            <NewsForm
-            {...props}
-            news={this.state.news}
-            addArticle={this.addArticle}
-            />
-          );
-        }}
-        />
-        <Route
-  exact path="/articles/:articleId(\d+)/edit" render={props => {
-    return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle}/>
-  }}
-/>
+          <Route
+            exact
+            path="/articles/new"
+            render={props => {
+              return (
+                <NewsForm
+                  {...props}
+                  news={this.state.news}
+                  addArticle={this.addArticle}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/articles/:articleId(\d+)/edit"
+            render={props => {
+              return (
+                <NewsEditForm
+                  {...props}
+                  news={this.state.news}
+                  updateExistingArticle={this.updateExistingArticle}
+                />
+              );
+            }}
+          />
+        </div>
       </React.Fragment>
     );
   }

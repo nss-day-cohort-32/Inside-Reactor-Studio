@@ -11,6 +11,7 @@ export class TaskCard extends Component {
       borderBottom: '1px #ccc dotted',
       textDecoration: this.props.task.task_completed ? 'line-through' : 'none',
       color: this.props.task.task_completed ? 'rgb(46, 139, 250)' : 'black',
+      margin: '1.5px'
     };
   };
 
