@@ -14,6 +14,8 @@ import NewsEditForm from "./news/NewsEditForm"
 import Welcome from "./signup/Welcome";
 import SignupForm from "./signup/signup";
 import Login from "./signup/login";
+import FriendsManager from "../modules/FriendsManager";
+import FriendSearch from "./friend/FriendSearch";
 
 class ApplicationViews extends Component {
   state = {
@@ -128,48 +130,49 @@ class ApplicationViews extends Component {
           />
         </div>
         <Route
-            path="/events/:eventId(\d+)/edit"
-            render={props => {
-              return (
-                <EventEditForm
-                  {...props}
-                  updateTask={this.updateTask}
-                  tasks={this.state.tasks}
-                />
-              );
-            }}
-          />
-        <Route 
-        exact
-        path="/articles"
-        render={props => {
-          return(
-            <NewsList
-            news={this.state.news}
-            {...props}
-            deleteArticle={this.deleteArticle}
-            />
-          );
-        }}
+          path="/events/:eventId(\d+)/edit"
+          render={props => {
+            return (
+              <EventEditForm
+                {...props}
+                updateTask={this.updateTask}
+                tasks={this.state.tasks}
+              />
+            );
+          }}
         />
         <Route
-        exact
-        path="/articles/new"
-        render={props => {
-          return(
-            <NewsForm
-            {...props}
-            news={this.state.news}
-            addArticle={this.addArticle}
-            />
-          );
-        }}
+          exact
+          path="/articles"
+          render={props => {
+            return (
+              <NewsList
+                news={this.state.news}
+                {...props}
+                deleteArticle={this.deleteArticle}
+              />
+            );
+          }}
         />
         <Route
-  exact path="/articles/:articleId(\d+)/edit" render={props => {
-    return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle}/>
-  }}
-/>
+          exact
+          path="/articles/new"
+          render={props => {
+            return (
+              <NewsForm
+                {...props}
+                news={this.state.news}
+                addArticle={this.addArticle}
+              />
+            );
+          }}
+        />
+        <Route
+          exact path="/articles/:articleId(\d+)/edit" render={props => {
+            return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle} />
+          }}
+        />
+        <Route exact path="/friends" component={FriendSearch} />
       </React.Fragment>
     );
   }

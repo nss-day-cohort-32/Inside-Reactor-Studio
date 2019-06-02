@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import FriendsManager from '../../modules/FriendsManager';
 
 export default class FriendSearch extends Component {
