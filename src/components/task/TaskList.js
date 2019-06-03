@@ -14,8 +14,13 @@ export class TaskList extends Component {
   componentDidMount() {
     TaskManager.getAll().then(allTasks => {
       console.log(allTasks);
+      const storedData = sessionStorage.getItem('credentials');
+      const storedObj = JSON.parse(storedData);
+      const filteredTasks = allTasks.filter(task => {
+        return storedObj.id === task.task_userId;
+      });
       this.setState({
-        tasks: allTasks
+        tasks: filteredTasks
       });
     });
   }
@@ -56,18 +61,28 @@ export class TaskList extends Component {
 
   //Add Task
   addTask = taskObj => {
+    const storedData = sessionStorage.getItem('credentials');
+    const storedObj = JSON.parse(storedData);
+
+    // console.log(JSON.parse(storedData))
     const newTask = {
       task_title: taskObj.title,
       task_doneBy: taskObj.doneBy,
-      task_completed: false
+      task_completed: false,
+      task_userId: storedObj.id
     };
+
     TaskManager.post(newTask)
       .then(() => TaskManager.getAll('tasks'))
-      .then(tasks =>
+      .then(tasks => {
+        console.log(tasks)
+        const filteredTasks = tasks.filter(task => {
+          return storedObj.id === task.task_userId;
+        });
         this.setState({
-          tasks
-        })
-      );
+          tasks: filteredTasks
+        });
+      });
   };
 
   render() {

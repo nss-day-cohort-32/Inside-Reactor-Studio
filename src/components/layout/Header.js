@@ -9,10 +9,12 @@ function Header() {
 }
 
 const headerStyle = {
-  background: '#333',
+  background: 'rgb(140, 100, 100)',
   color: '#fff',
   textAlign: 'center',
-  padding: '10px'
+  padding: '30px',
+  fontFamily: 'bombing, arial',
+  marginBottom: '30px'
 }
 
 export default Header;

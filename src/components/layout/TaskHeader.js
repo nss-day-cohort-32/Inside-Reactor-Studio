@@ -12,8 +12,9 @@ const headerStyle = {
   background: '#333',
   color: '#fff',
   textAlign: 'center',
-  padding: '10px',
-  marginBottom: '35px'
+  padding: '30px',
+  marginBottom: '35px',
+  marginTop: '40px'
 }
 
 export default TaskHeader;

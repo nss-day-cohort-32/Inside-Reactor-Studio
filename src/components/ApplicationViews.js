@@ -79,9 +79,9 @@ class ApplicationViews extends Component {
             );
           }}
         />
-        <div className="container">
+        <div className="container-fluid">
           {/* TASKS */}
-          <div className="scrollable">
+          <div className="">
             <Route
               exact
               path="/tasks"
@@ -90,8 +90,10 @@ class ApplicationViews extends Component {
               }}
             />
           </div>
-          {/* EVENTS */}
-          <div className="container">
+        </div>
+        {/* EVENTS */}
+        <div className="container-fluid">
+          <div className="">
             <Route
               exact
               path="/events"
@@ -105,37 +107,25 @@ class ApplicationViews extends Component {
                 );
               }}
             />
-            <Route
-              exact
-              path="/events/new"
-              render={props => {
-                return (
-                  <EventForm
-                    {...props}
-                    events={this.state.events}
-                    addEvent={this.addEvent}
-                  />
-                );
-              }}
-            />
-            <Route
-              path="/events/:eventId(\d+)/edit"
-              render={props => {
-                return (
-                  <EventEditForm
-                    {...props}
-                    updateTask={this.updateTask}
-                    tasks={this.state.tasks}
-                  />
-                );
-              }}
-            />
           </div>
           <Route
-            path="/tasks/:taskId(\d+)/edit"
+            exact
+            path="/events/new"
             render={props => {
               return (
-                <TaskEditForm
+                <EventForm
+                  {...props}
+                  events={this.state.events}
+                  addEvent={this.addEvent}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/events/:eventId(\d+)/edit"
+            render={props => {
+              return (
+                <EventEditForm
                   {...props}
                   updateTask={this.updateTask}
                   tasks={this.state.tasks}
@@ -143,45 +133,61 @@ class ApplicationViews extends Component {
               );
             }}
           />
-          <Route
-            exact
-            path="/articles"
-            render={props => {
-              return (
-                <NewsList
-                  news={this.state.news}
-                  {...props}
-                  deleteArticle={this.deleteArticle}
-                />
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/articles/new"
-            render={props => {
-              return (
-                <NewsForm
-                  {...props}
-                  news={this.state.news}
-                  addArticle={this.addArticle}
-                />
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/articles/:articleId(\d+)/edit"
-            render={props => {
-              return (
-                <NewsEditForm
-                  {...props}
-                  news={this.state.news}
-                  updateExistingArticle={this.updateExistingArticle}
-                />
-              );
-            }}
-          />
+        </div>
+        <Route
+          path="/tasks/:taskId(\d+)/edit"
+          render={props => {
+            return (
+              <TaskEditForm
+                {...props}
+                updateTask={this.updateTask}
+                tasks={this.state.tasks}
+              />
+            );
+          }}
+        />
+        <div className="container-fluid">
+          <div className="">
+            <Route
+              exact
+              path="/articles"
+              render={props => {
+                return (
+                  <NewsList
+                    news={this.state.news}
+                    {...props}
+                    deleteArticle={this.deleteArticle}
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/articles/new"
+              render={props => {
+                return (
+                  <NewsForm
+                    {...props}
+                    news={this.state.news}
+                    addArticle={this.addArticle}
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/articles/:articleId(\d+)/edit"
+              render={props => {
+                return (
+                  <NewsEditForm
+                    {...props}
+                    news={this.state.news}
+                    updateExistingArticle={this.updateExistingArticle}
+                  />
+                );
+              }}
+            />
+          </div>
         </div>
       </React.Fragment>
     );

@@ -136,6 +136,11 @@
       "user_name": "driscoll.recording@gmail.com",
       "password": "password",
       "id": 30
+    },
+    {
+      "user_name": "gmoney",
+      "password": "password",
+      "id": 31
     }
   ],
   "messages": [
@@ -191,20 +196,6 @@
   ],
   "articles": [
     {
-      "id": 7,
-      "article_title": "Article Seven",
-      "article_blurb": "BLURRRD",
-      "article_link": "LURNK",
-      "article_published": "2019-05-18"
-    },
-    {
-      "id": 9,
-      "article_title": "Article9",
-      "article_blurb": "I think I've got it.",
-      "article_link": "Link Goes HEre",
-      "article_published": "2019-04-11"
-    },
-    {
       "article_title": "Top 10 Things to Do in the North",
       "article_blurb": "1. be Cold",
       "article_link": "northernthings.com",
@@ -213,58 +204,41 @@
       "id": 10
     },
     {
-      "article_title": "Top 5 Winterfell Facts",
-      "article_blurb": "Its crazy",
-      "article_link": "coldthings.com",
-      "article_published": "2019-05-1",
-      "userId": "1",
+      "article_title": "",
+      "article_blurb": "",
+      "article_link": "",
+      "article_published": "",
       "id": 11
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "task_title": "Josh Task",
-      "task_doneBy": "2019-05-15",
-      "task_completed": false
-    },
-    {
-      "task_title": "Ken Task",
-      "task_doneBy": "2019-05-13",
-      "task_completed": false,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "task_title": "Testing",
-      "task_doneBy": "2019-05-16",
-      "task_completed": false
-    },
-    {
       "task_title": "hey",
-      "task_doneBy": "",
+      "task_doneBy": "2019-06-19",
       "task_completed": false,
-      "id": 5
+      "task_userId": 31,
+      "id": 12
     },
     {
-      "id": 6,
-      "task_title": "yo",
-      "task_doneBy": "",
-      "task_completed": false
+      "task_title": "task",
+      "task_doneBy": "2019-06-26",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 14
     }
   ],
   "events": [
     {
-      "id": 17,
-      "event_name": "Super Party",
-      "event_details": "WWE thrashdown supra edition XXX bring your frenz -love joey",
-      "event_date": "2019-05-03"
+      "id": 20,
+      "event_name": "Job Fair for losers",
+      "event_details": "if youre a loser come to this ",
+      "event_date": "2019-06-15"
     },
     {
-      "id": 19,
-      "event_name": "Pool Party at the Zoo",
-      "event_details": "it is what it is ",
-      "event_date": "2019-05-15"
+      "event_name": "",
+      "event_details": "",
+      "event_date": "",
+      "id": 21
     }
   ],
   "friends": [

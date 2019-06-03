@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {withRouter} from 'react-router-dom'
-import PropTypes from 'prop-types';
-// import TaskList from './TaskList';
 import './Tasks.css'
 export class TaskCard extends Component {
   getStyle = () => {
@@ -10,7 +8,7 @@ export class TaskCard extends Component {
       padding: '10px',
       borderBottom: '1px #ccc dotted',
       textDecoration: this.props.task.task_completed ? 'line-through' : 'none',
-      color: this.props.task.task_completed ? 'rgb(46, 139, 250)' : 'black',
+      color: this.props.task.task_completed ? 'rgb(216, 132, 58)' : 'black',
       margin: '1.5px'
     };
   };
@@ -44,12 +42,8 @@ export class TaskCard extends Component {
   }
 }
 
-// TaskCard.propTypes = {
-//   task: PropTypes.object.isRequired
-// };
-
 const btnStyle = {
-  background: 'rgb(46, 139, 250)',
+  background: 'rgb(100, 130, 100)',
   color: 'white',
   border: 'none',
   padding: '5px 9px',
@@ -59,7 +53,7 @@ const btnStyle = {
 };
 
 const editBtnStyle = {
-  background: 'rgb(46, 139, 250)',
+  background: 'rgb(216, 132, 88)',
   color: 'white',
   border: 'none',
   padding: '5px 9px',
