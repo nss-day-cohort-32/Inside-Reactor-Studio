@@ -241,24 +241,40 @@
   ],
   "tasks": [
     {
-      "task_title": "Repopulate the Dom",
-      "task_doneBy": "2019-06-02",
+      "task_title": "hey",
+      "task_doneBy": "2019-06-19",
+      "task_completed": true,
+      "task_userId": 31,
+      "id": 12
+    },
+    {
+      "task_title": "task",
+      "task_doneBy": "2019-06-26",
       "task_completed": false,
-      "id": 1
+      "task_userId": 26,
+      "id": 14
+    },
+    {
+      "task_title": "",
+      "task_doneBy": "",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 15
+    },
+    {
+      "task_title": "",
+      "task_doneBy": "",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 16
     }
   ],
   "events": [
     {
-      "id": 17,
-      "event_name": "Super Party",
-      "event_details": "WWE thrashdown supra edition XXX bring your frenz -love joey",
-      "event_date": "2019-05-03"
-    },
-    {
-      "id": 18,
-      "event_name": "Showdown",
-      "event_details": "Be here",
-      "event_date": "2019-05-16"
+      "id": 1,
+      "event_name": "",
+      "event_details": "",
+      "event_date": ""
     }
   ],
   "friends": [
