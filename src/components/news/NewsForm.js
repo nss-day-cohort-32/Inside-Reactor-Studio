@@ -77,7 +77,7 @@ export default class NewsForm extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="article_published">Event Date</label>
+                        <label htmlFor="article_published">Date Published</label>
                         <input
                          type="date"
                          required
