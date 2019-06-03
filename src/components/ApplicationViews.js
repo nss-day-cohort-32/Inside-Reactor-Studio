@@ -9,21 +9,20 @@ import EventEditForm from './event/EventEditForm';
 
 import TaskList from './task/TaskList';
 import TaskEditForm from './task/TaskEditForm';
-
 import NewsList from './news/NewsList';
 import NewsForm from './news/NewsForm';
 import NewsEditForm from './news/NewsEditForm';
-
 import Welcome from './signup/Welcome';
 import SignupForm from './signup/signup';
 import Login from './signup/login';
+import FriendList from './friend/FriendList';
 
 class ApplicationViews extends Component {
   state = {
     signup: [],
     news: [],
-    messages: [],
-    friends: []
+    messages: []
+    // friends: []
   };
 
   componentDidMount() {
@@ -185,6 +184,13 @@ class ApplicationViews extends Component {
                     updateExistingArticle={this.updateExistingArticle}
                   />
                 );
+              }}
+            />
+            <Route
+              exact
+              path="/friends"
+              render={props => {
+                return <FriendList friends={this.state.friends} {...props} />;
               }}
             />
           </div>
