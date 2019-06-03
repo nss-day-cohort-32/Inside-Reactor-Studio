@@ -1,3 +1,60 @@
-body {
-    background-color: blue;
+.news {
+  text-align: center;
+  color: black;
+}
+
+.event-card {
+  padding: 40px;
+  margin: 10px;
+  background: #ccc;
+}
+
+.article-card {
+  padding: 40px;
+  margin: 5px;
+  background: #ccc;
+}
+
+.btn.btn-success:hover {
+  border-radius: 50px;
+  background: rgb(171, 82, 82);
+  border: 1px solid rgb(171, 82, 82);
+}
+
+.btn.btn-success {
+  background: rgb(216, 132, 88);
+  margin-left: 10px;
+  border: rgb(171, 82, 82);
+}
+button.btn.btn-primary,
+input.btn:hover,
+button:hover {
+  background: #b67f77;
+  color: white;
+  border: #b67f77;
+}
+
+button a:hover {
+  background: rgb(181, 74, 74);
+  color: white;
+  border: rgb(181, 74, 74);
+}
+
+button,
+button a {
+  background: rgb(100, 130, 100);
+  border: #5b412ac1;
+  color: #fff;
+  padding: 4.8px;
+  padding-bottom: 7px;
+}
+button.btn.btn-primary:hover,
+button:hover {
+  background: rgb(181, 74, 74);
+}
+
+section.articles {
+  padding: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
 }

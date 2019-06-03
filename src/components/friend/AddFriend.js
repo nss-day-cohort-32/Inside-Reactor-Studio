@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import FriendList from "./friend/FriendList";
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 import FriendsManager from "../modules/FriendsManager";
 
 export default class AddFriend extends Component {
