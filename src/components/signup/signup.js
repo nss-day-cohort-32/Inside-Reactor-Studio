@@ -11,7 +11,7 @@ export default class SignupForm extends Component {
         email: '',
         currentUser: {}
     };
-
+    
     addUser = user =>
         LoginManager.post(user)
             // .then(() => LoginManager.getAll('users'))

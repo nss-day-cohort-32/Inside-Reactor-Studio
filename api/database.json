@@ -189,125 +189,49 @@
   ],
   "articles": [
     {
-      "id": 7,
-      "article_title": "Article Seven",
-      "article_blurb": "BLURRRD",
-      "article_link": "LURNK",
-      "article_published": "2019-05-18"
-    },
-    {
-      "id": 9,
-      "article_title": "Article9",
-      "article_blurb": "I think I've got it.",
-      "article_link": "Link Goes HEre",
-      "article_published": "2019-04-11"
-    },
-    {
-      "article_title": "Top 10 Things to Do in the North",
-      "article_blurb": "1. be Cold",
-      "article_link": "northernthings.com",
-      "article_published": "1550-05-11",
-      "userId": "1",
-      "id": 10
-    },
-    {
-      "article_title": "Top 5 Winterfell Facts",
-      "article_blurb": "Its crazy",
-      "article_link": "coldthings.com",
-      "article_published": "2019-05-1",
-      "userId": "1",
-      "id": 11
-    },
-    {
-      "article_title": "LOL",
-      "article_blurb": "LOL",
-      "article_link": "LOL",
-      "article_published": "2019-05-08",
-      "userId": "2",
-      "id": 12
-    },
-    {
-      "article_title": "hrteh",
-      "article_blurb": "eht",
-      "article_link": "ehey",
-      "article_published": "2019-05-20",
-      "userId": "2",
-      "id": 13
-    },
-    {
-      "article_name": "",
-      "article_blurb": "Yaaay",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-31",
-      "id": 14
-    },
-    {
+      "id": 1,
       "article_title": "",
-      "article_blurb": "Yaaay",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-10",
-      "id": 15
-    },
-    {
-      "article_title": "Test",
-      "article_blurb": "Test Blurb",
-      "article_link": "www.youtube.com",
-      "article_published": "2019-05-01",
-      "id": 16
-    },
-    {
-      "article_title": "Godzilla Hero or Menace?",
-      "article_blurb": "Godzilla, big dick G.",
-      "article_link": "https://www.youtube.com/watch?v=5fAsJyBdWns",
-      "article_published": "2019-05-31",
-      "id": 17
-    },
-    {
-      "article_title": "Save",
-      "article_blurb": "Save",
-      "article_link": "save",
-      "article_published": "2019-06-01",
-      "id": 18
+      "article_blurb": "",
+      "article_link": "",
+      "article_published": ""
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "task_title": "Josh Task",
-      "task_doneBy": "2019-05-15",
-      "task_completed": false
+      "task_title": "hey",
+      "task_doneBy": "2019-06-19",
+      "task_completed": true,
+      "task_userId": 31,
+      "id": 12
     },
     {
-      "task_title": "Joey Task",
-      "task_doneBy": "2019-05-09",
+      "task_title": "task",
+      "task_doneBy": "2019-06-26",
       "task_completed": false,
-      "id": 2
+      "task_userId": 26,
+      "id": 14
     },
     {
-      "task_title": "Ken Task",
-      "task_doneBy": "2019-05-13",
+      "task_title": "",
+      "task_doneBy": "",
       "task_completed": false,
-      "id": 3
+      "task_userId": 26,
+      "id": 15
     },
     {
-      "id": 4,
-      "task_title": "Testing",
-      "task_doneBy": "2019-05-16",
-      "task_completed": false
+      "task_title": "",
+      "task_doneBy": "",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 16
     }
   ],
   "events": [
     {
-      "id": 17,
-      "event_name": "Super Party",
-      "event_details": "WWE thrashdown supra edition XXX bring your frenz -love joey",
-      "event_date": "2019-05-03"
-    },
-    {
-      "id": 18,
-      "event_name": "Showdown",
-      "event_details": "Be here",
-      "event_date": "2019-05-16"
+      "id": 1,
+      "event_name": "",
+      "event_details": "",
+      "event_date": ""
     }
   ],
   "friends": [
