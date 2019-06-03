@@ -2,120 +2,138 @@
   "users": [
     {
       "id": 1,
-      "user_name": "Ned Stark",
-      "password": "password"
+      "user_name": "Carly Bergthold",
+      "email": "carly@mail.com"
     },
     {
       "id": 2,
-      "user_name": "Robert Baratheon",
-      "password": "password"
+      "user_name": "Heather Cleland",
+      "email": "heather@mail.com"
     },
     {
       "id": 3,
-      "user_name": "Jon Snow",
-      "password": "password"
+      "user_name": "Dan Storm",
+      "email": "dan@mail.com"
     },
     {
       "id": 4,
-      "user_name": "Daenerys Targaryen",
-      "password": "password"
+      "user_name": "Dek Haji",
+      "email": "dek@mail.com"
     },
     {
-      "user_name": "Gendry",
-      "password": "truKing",
+      "user_name": "Jason Collum",
+      "email": "jasonc@mail.com",
       "id": 5
     },
     {
-      "user_name": "Joffry",
-      "password": "bratking",
+      "user_name": "Jimmy Metts",
+      "email": "jimmy@mail.com",
       "id": 6
     },
     {
-      "user_name": "Rob Stark",
-      "password": "kingofnorth",
+      "user_name": "Josh Webb",
+      "email": "josh@mail.com",
       "id": 7
     },
     {
-      "user_name": "GeorgeRMartin666",
-      "password": "nobookforyou",
+      "user_name": "Sean Glavin",
+      "email": "sean@mail.com",
       "id": 8
     },
     {
-      "user_name": "Sansa",
-      "password": "wannabequeen",
+      "user_name": "Shelley Arnold",
+      "email": "shelley@mail.com",
       "id": 9
     },
     {
-      "user_name": "haji",
-      "password": "dek",
+      "user_name": "Burak Koc",
+      "email": "burak@mail.com",
       "id": 10
     },
     {
-      "user_name": "hcleland",
-      "id": 11
-    },
-    {
-      "user_name": "hcleland",
-      "id": 12
-    },
-    {
-      "user_name": "hcleland",
-      "id": 13
-    },
-    {
-      "user_name": "jdriscoll",
-      "id": 14
-    },
-    {
-      "user_name": "jwebb",
-      "id": 15
-    },
-    {
-      "user_name": "jwebb",
-      "id": 16
-    },
-    {
-      "user_name": "jwebb",
-      "id": 17
-    },
-    {
-      "user_name": "kdixon",
-      "id": 18
-    },
-    {
-      "user_name": "hcleland",
-      "id": 19
-    },
-    {
-      "user_name": "hcleland",
-      "id": 20
-    },
-    {
-      "user_name": "bryan",
-      "id": 21
-    },
-    {
-      "user_name": "hcleland",
-      "id": 22
-    },
-    {
-      "user_name": "hcleland",
-      "id": 23
-    },
-    {
-      "user_name": "blong",
-      "password": "password",
+      "user_name": "Colin Sandlin",
+      "email": "colin@mail.com",
       "id": 24
     },
     {
-      "user_name": "hcleland",
-      "password": "password",
+      "user_name": "Deep Patel",
+      "email": "deep@mail.com",
       "id": 25
     },
     {
-      "user_name": "driscoll.recording@gmail.com",
-      "password": "password",
+      "user_name": "Eliot Clarke",
+      "email": "eliot@mail.com",
       "id": 26
+    },
+    {
+      "user_name": "Ellie Ash",
+      "email": "ellie@mail.com",
+      "id": 27
+    },
+    {
+      "user_name": "Emily Loggins",
+      "email": "emily@mail.com",
+      "id": 28
+    },
+    {
+      "user_name": "Hughes Speer",
+      "email": "hughes@mail.com",
+      "id": 29
+    },
+    {
+      "user_name": "Jake Preston",
+      "email": "jake@mail.com",
+      "id": 30
+    },
+    {
+      "user_name": "Jason Brooks",
+      "email": "jasonb@mail.com",
+      "id": 31
+    },
+    {
+      "user_name": "JR Sigrah",
+      "email": "joabe@mail.com",
+      "id": 32
+    },
+    {
+      "user_name": "Joel Venable",
+      "email": "joel@mail.com",
+      "id": 33
+    },
+    {
+      "user_name": "Joey Driscoll",
+      "email": "joseph@mail.com",
+      "id": 34
+    },
+    {
+      "user_name": "Keisha Card",
+      "email": "keisha@mail.com",
+      "id": 35
+    },
+    {
+      "user_name": "Ken Dixon",
+      "email": "ken@mail.com",
+      "id": 36
+    },
+    {
+      "user_name": "Logan Palmer",
+      "email": "logan@mail.com",
+      "id": 37
+    },
+    {
+      "user_name": "Nate Fleming",
+      "email": "nathaniel@mail.com",
+      "id": 38
+    },
+    {
+      "user_name": "Ricky McConnell",
+      "email": "ricky@mail.com",
+      "id": 39
+    },
+    {
+      "user_name": "Addam Joor",
+      "email": "addam@mail.com",
+      "id": 40
     }
   ],
   "messages": [
@@ -296,17 +314,17 @@
     {
       "id": 1,
       "userId": 1,
-      "otherFriendsId": 3
+      "friendUserId": 3
     },
     {
       "id": 2,
       "userId": 1,
-      "otherFriendsId": 2
+      "friendUserId": 2
     },
     {
       "id": 3,
       "userId": 1,
-      "otherFriendsId": 4
+      "friendUserId": 4
     }
   ]
 }
