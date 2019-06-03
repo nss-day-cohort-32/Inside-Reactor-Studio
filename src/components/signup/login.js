@@ -10,7 +10,7 @@ export default class Login extends Component {
     // Set initial state
     state = {
         userName: "",
-        password: ""
+        email: ""
     }
 
     // Update state whenever an input field is edited
@@ -31,7 +31,7 @@ export default class Login extends Component {
                     "credentials",
                     JSON.stringify({
                         userName: result[0].user_name,
-                        password: result[0].password,
+                        email: result[0].email,
                         id: result[0].id
 
                     })
@@ -54,19 +54,19 @@ export default class Login extends Component {
             <form onSubmit={this.handleLogin}>
                 <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <label htmlFor="inputUserName">
-                    User Name
+                    Name
                 </label>
                 <input onChange={this.handleFieldChange} type="text"
                     id="userName"
-                    placeholder="User Name"
+                    placeholder="FirstName LastName"
                     required="" autoFocus="" />
 
-                <label htmlFor="inputUserPassword">
-                    Password
+                <label htmlFor="inputUserEmail">
+                    Email
                 </label>
-                <input onChange={this.handleFieldChange} type="password"
-                    id="password"
-                    placeholder="Password"
+                <input onChange={this.handleFieldChange} type="email"
+                    id="email"
+                    placeholder="Name@Mail.com"
                     required="" />
                 <button type="submit">
                     Sign in

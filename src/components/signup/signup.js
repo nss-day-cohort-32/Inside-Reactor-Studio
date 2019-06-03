@@ -8,7 +8,7 @@ export default class SignupForm extends Component {
     // Set initial state
     state = {
         userName: '',
-        password: '',
+        email: '',
         currentUser: {}
     };
 
@@ -36,7 +36,7 @@ export default class SignupForm extends Component {
 
         const user = {
             user_name: this.state.user_name,
-            password: this.state.password,
+            email: this.state.email,
         };
         console.log("user", user)
 
@@ -48,25 +48,25 @@ export default class SignupForm extends Component {
             <React.Fragment>
                 <form className="SignupForm">
                     <div className="form-group">
-                        <label htmlFor="user_name">User Name</label>
+                        <label htmlFor="user_name">Name</label>
                         <input
                             type="text"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="user_name"
-                            placeholder="User Name"
+                            placeholder="FirstName LastName"
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="user_password">Password</label>
+                        <label htmlFor="user_email">Email</label>
                         <input
-                            type="password"
+                            type="email"
                             required
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="password"
-                            placeholder="User Password"
+                            id="email"
+                            placeholder="Name@Mail.com"
                         />
                     </div>
                     <button
