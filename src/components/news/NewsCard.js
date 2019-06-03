@@ -29,7 +29,7 @@ export default class NewsCard extends Component {
                     this.props.history.push(`/articles/${this.props.article.id}/edit`)
                 }}
                 >
-                    Edit Article
+                    Edit
                 </button>
         </article>
         );

@@ -22,7 +22,7 @@
 }
 
 .btn.btn-success {
-  background: #b67f77;
+  background: rgb(216, 132, 88);
   margin-left: 10px;
   border: rgb(171, 82, 82);
 }
@@ -42,8 +42,8 @@ button a:hover {
 
 button,
 button a {
-  background: #b67f77;
-  border: #b67f77;
+  background: rgb(100, 130, 100);
+  border: #5b412ac1;
   color: #fff;
   padding: 4.8px;
   padding-bottom: 7px;

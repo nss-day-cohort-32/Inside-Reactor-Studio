@@ -202,20 +202,13 @@
       "article_published": "1550-05-11",
       "userId": "1",
       "id": 10
-    },
-    {
-      "article_title": "",
-      "article_blurb": "",
-      "article_link": "",
-      "article_published": "",
-      "id": 11
     }
   ],
   "tasks": [
     {
       "task_title": "hey",
       "task_doneBy": "2019-06-19",
-      "task_completed": false,
+      "task_completed": true,
       "task_userId": 31,
       "id": 12
     },
@@ -225,6 +218,20 @@
       "task_completed": false,
       "task_userId": 26,
       "id": 14
+    },
+    {
+      "task_title": "",
+      "task_doneBy": "",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 15
+    },
+    {
+      "task_title": "",
+      "task_doneBy": "",
+      "task_completed": false,
+      "task_userId": 26,
+      "id": 16
     }
   ],
   "events": [
@@ -233,12 +240,6 @@
       "event_name": "Job Fair for losers",
       "event_details": "if youre a loser come to this ",
       "event_date": "2019-06-15"
-    },
-    {
-      "event_name": "",
-      "event_details": "",
-      "event_date": "",
-      "id": 21
     }
   ],
   "friends": [
