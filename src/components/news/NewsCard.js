@@ -9,7 +9,7 @@ export default class NewsCard extends Component {
         <article key={this.props.article.id}className="article-card">
             <h4>{this.props.article.article_title}</h4>
             <h5>{this.props.article.article_blurb}</h5>
-            <h6>{this.props.article.article_link}</h6>
+            <a href={this.props.article.article_link}>Check a look</a>
             <p>{this.props.article.article_published}</p>
             <button onClick={
                 () => {

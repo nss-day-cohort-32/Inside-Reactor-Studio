@@ -16,6 +16,10 @@ import Welcome from './signup/Welcome';
 import SignupForm from './signup/signup';
 import Login from './signup/login';
 import FriendList from './friend/FriendList';
+import MessageList from './message/MessageList';
+import MessageForm from './message/MessageForm';
+import MessagesManager from '../modules/MessageManager';
+
 
 class ApplicationViews extends Component {
   state = {
@@ -173,6 +177,32 @@ class ApplicationViews extends Component {
                 );
               }}
             />
+            <Route
+            exact
+            path="/messages"
+            render={props => {
+              return (
+                <MessageList
+                  Messages={this.state.messages}
+                  {...props}
+                  deleteMessage={this.deleteMessage}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/messages/new"
+            render={props => {
+              return (
+                <MessageForm
+                  {...props}
+                  events={this.state.messages}
+                  addMessage={this.addMessage}
+                />
+              );
+            }}
+          />
             <Route
               exact
               path="/articles/:articleId(\d+)/edit"

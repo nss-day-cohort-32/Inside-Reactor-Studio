@@ -189,11 +189,54 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "article_title": "",
-      "article_blurb": "",
-      "article_link": "",
-      "article_published": ""
+      "article_title": "Top 5 Winterfell Facts",
+      "article_blurb": "Its crazy",
+      "article_link": "coldthings.com",
+      "article_published": "2019-05-1",
+      "userId": "1",
+      "id": 11
+    },
+    {
+      "id": 17,
+      "article_title": "Godzilla Hero or Menace?!",
+      "article_blurb": "\"He's pro nuclear in 2019.  What's that about?\" - Ghidora",
+      "article_link": "https://www.youtube.com/watch?v=o6qAIaqK3_Q",
+      "article_published": "2019-05-31"
+    },
+    {
+      "article_title": "D & D Tell All",
+      "article_blurb": "Game of Thrones show runners share their secrets and techniques.",
+      "article_link": "https://www.amazon.com/Screenwriting-Dummies-Laura-Schellhardt/dp/0470345403/ref=sr_1_3?keywords=screenwriting+for+dummies&qid=1559522949&s=gateway&sr=8-3",
+      "article_published": "2019-06-02",
+      "id": 18
+    },
+    {
+      "article_title": "Old Man Yells At Cloud",
+      "article_blurb": "Oldster Abraham Simpson has had ENOUGH",
+      "article_link": "https://i.kym-cdn.com/photos/images/newsfeed/001/044/247/297.png",
+      "article_published": "2019-04-26",
+      "id": 19
+    },
+    {
+      "article_title": "Local Man Becoming Very Motivated",
+      "article_blurb": "Might Controls Everything -Vergil",
+      "article_link": "https://www.youtube.com/watch?v=oyfnJVmoXHc",
+      "article_published": "2019-03-09",
+      "id": 20
+    },
+    {
+      "article_title": "5 Precious Kittens Who Unfortunately are Fiscally Conservative",
+      "article_blurb": "Staunchly fiscally conservative. Sorry.",
+      "article_link": "http://reductress.com/post/5-precious-kittens-who-unfortunately-are-fiscally-conservative/",
+      "article_published": "2019-06-03",
+      "id": 21
+    },
+    {
+      "article_title": "Woman Sad ‘Game of Thrones’ Is Over After Eight Years of Hating It",
+      "article_blurb": "“I guess I could get into hating This is Us, but it lacks the complex narrative to stay angry for days on end. \"",
+      "article_link": "http://reductress.com/post/woman-sad-game-of-thrones-is-over-after-eight-years-of-hating-it/",
+      "article_published": "2019-04-15",
+      "id": 22
     }
   ],
   "tasks": [
