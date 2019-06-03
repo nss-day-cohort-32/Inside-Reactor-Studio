@@ -21,7 +21,7 @@ class ApplicationViews extends Component {
     signup: [],
     news: [],
     messages: [],
-    friends: []
+    // friends: []
   };
 
   componentDidMount() {
