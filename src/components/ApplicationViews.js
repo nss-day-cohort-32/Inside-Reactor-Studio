@@ -14,8 +14,7 @@ import NewsEditForm from "./news/NewsEditForm"
 import Welcome from "./signup/Welcome";
 import SignupForm from "./signup/signup";
 import Login from "./signup/login";
-import FriendsManager from "../modules/FriendsManager";
-import FriendSearch from "./friend/FriendSearch";
+import FriendList from "./friend/FriendList";
 
 class ApplicationViews extends Component {
   state = {
@@ -172,7 +171,17 @@ class ApplicationViews extends Component {
             return <NewsEditForm {...props} news={this.state.news} updateExistingArticle={this.updateExistingArticle} />
           }}
         />
-        <Route exact path="/friends" component={FriendSearch} />
+        <Route
+          exact path="/friends"
+          render={props => {
+            return (
+              <FriendList
+                friends={this.state.friends}
+                {...props}
+              />
+            );
+          }}
+        />
       </React.Fragment>
     );
   }

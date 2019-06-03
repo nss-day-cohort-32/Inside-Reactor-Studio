@@ -23,12 +23,12 @@ class NavBar extends Component {
                     <li className="nav-item">
                         <Link className="nav-link" to="/messages">Messages</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link className="nav-link" to="/friends">Friends</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/welcome/">Log Out</Link>
-                    </li>
+                        <Link className="nav-link" to="/">Log Out</Link>
+                    </li> */}
                 </ul>
             </nav>
         )
